@@ -82,7 +82,7 @@
     setToggleState(false);
     unlockBody();
     drawer.classList.remove('is-open');
-    if (previouslyFocused) previouslyFocused.focus();
+    if (previouslyFocused) previouslyFocused.focus({ preventScroll: true });
   }
 
   function toggleDrawer() {

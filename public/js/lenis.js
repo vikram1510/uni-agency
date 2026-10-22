@@ -155,16 +155,22 @@
     }
   }, true);
 
+  // Capture phase + preventDefault runs before Astro's ClientRouter, which
+  // otherwise also jumps to the hash and fights the smooth scroll. The scroll
+  // waits a frame so the mobile drawer can unlock body overflow first.
   document.addEventListener('click', function(event) {
     var link = event.target.closest('a');
     if (!link) return;
 
     var hash = getSameDocumentHash(link.getAttribute('href'));
-    if (!hash || !scrollToHash(hash, false)) return;
+    if (!hash || !getAnchorTarget(hash) || !currentLenis) return;
 
-    history.pushState(null, '', link.href);
     event.preventDefault();
-  });
+    history.pushState(null, '', link.href);
+    requestAnimationFrame(function() {
+      scrollToHash(hash, false);
+    });
+  }, true);
 
   document.addEventListener('astro:before-swap', function() {
     // Stop the animation loop and destroy Lenis before Astro swaps the DOM,
