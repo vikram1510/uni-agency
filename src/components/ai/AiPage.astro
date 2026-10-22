@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section from "@components/ui/layout/Section.astro";
+import Container from "@components/ui/layout/Container.astro";
+import Heading from "@components/ui/atoms/Heading.astro";
+import Text from "@components/ui/atoms/Text.astro";
+import Chat from "@components/ai/Chat";
+import { getNovaCopy, type NovaLocale } from "@utils/nova-i18n";
+
+export interface Props {
+  locale: NovaLocale;
+}
+
+const { locale } = Astro.props;
+const copy = getNovaCopy(locale).ai;
+---
+
+<Layout
+  title={copy.title}
+  description={copy.description}
+  lang={locale}
+  locale={locale}
+  navbarVariant="floating"
+  footerVariant="nova"
+  fullBleedTop
+>
+  <Section tone="page" class="pt-32 pb-20 md:pt-40 md:pb-28">
+    <Container class="max-w-3xl">
+      <div class="mb-10 text-center">
+        <Text variant="accent-label" class="mb-3">{copy.eyebrow}</Text>
+        <Heading tag="h1" variant="section-title" class="mb-4">{copy.heading}</Heading>
+        <Text variant="lead">{copy.intro}</Text>
+      </div>
+      <Chat client:idle copy={copy} />
+    </Container>
+  </Section>
+</Layout>

@@ -53,3 +53,4 @@ TEMPLATE.md
 archive/
 
 dev-server.log
+.vercel

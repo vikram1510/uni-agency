@@ -7,22 +7,29 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
+import vercel from '@astrojs/vercel';
+
 // https://astro.build/config
 export default defineConfig({
-	output: 'static',
+  output: 'static',
+
   devToolbar: {
     enabled: false,
   },
+
   site: SITE_URL,
   base: undefined,
   compressHTML: true,
+
   image: {
     responsiveStyles: true,
   },
+
   build: {
     assets: '_assets',
     inlineStylesheets: 'never',
   },
+
   // Sitemap: filter cuts utility pages (component gallery /dev/ and
   // fixture QA /qa/) that have a meta noindex - they went into it without it
   // sitemap-index.xml and sent Google a contradictory signal (as for webscale).
@@ -36,6 +43,7 @@ export default defineConfig({
       },
     }),
   ],
+
   vite: {
     plugins: [tailwindcss()],
     // Why: Agents and scripts write files in batches (JSON, .astro, tests).
@@ -95,5 +103,7 @@ export default defineConfig({
     optimizeDeps: {
       noDiscovery: false,
     },
-  }
+  },
+
+  adapter: vercel()
 });

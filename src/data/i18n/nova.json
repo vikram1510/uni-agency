@@ -17,7 +17,8 @@
         { "label": "O nas", "href": "#zespol" },
         { "label": "Usługi", "href": "#uslugi" },
         { "label": "Realizacje", "href": "#realizacje" },
-        { "label": "Opinie", "href": "#opinie" }
+        { "label": "Opinie", "href": "#opinie" },
+        { "label": "AI", "href": "/ai/" }
       ],
       "cta": {
         "label": "Rozpocznij projekt",
@@ -32,6 +33,20 @@
         "drawer": "Menu nawigacji"
       },
       "languageLabel": "Wybierz język"
+    },
+    "ai": {
+      "title": "Asystent AI",
+      "description": "Zapytaj naszego asystenta AI o produkt, ceny i możliwości.",
+      "eyebrow": "AI",
+      "heading": "Zapytaj o nasz produkt",
+      "intro": "Masz pytanie? Nasz asystent AI odpowie od razu.",
+      "placeholder": "Napisz wiadomość...",
+      "send": "Wyślij",
+      "stop": "Zatrzymaj",
+      "greeting": "Cześć! W czym mogę pomóc?",
+      "empty": "Zapytaj o produkt lub wybierz pytanie poniżej.",
+      "suggestions": ["Co to robi?", "Ile to kosztuje?", "Dla kogo to jest?"],
+      "error": "Coś poszło nie tak. Spróbuj ponownie."
     },
     "sections": {
       "nova-hero-wireframe": {
@@ -130,7 +145,8 @@
         { "label": "O nas", "href": "#zespol" },
         { "label": "Usługi", "href": "#uslugi" },
         { "label": "Realizacje", "href": "#realizacje" },
-        { "label": "Opinie", "href": "#opinie" }
+        { "label": "Opinie", "href": "#opinie" },
+        { "label": "AI", "href": "/ai/" }
       ],
       "ariaLegal": "Dokumenty prawne",
       "ariaNavigation": "Nawigacja stopki",
@@ -158,7 +174,8 @@
         { "label": "About us", "href": "#zespol" },
         { "label": "Services", "href": "#services" },
         { "label": "Selected work", "href": "#realizacje" },
-        { "label": "Reviews", "href": "#opinie" }
+        { "label": "Reviews", "href": "#opinie" },
+        { "label": "AI", "href": "/ai/" }
       ],
       "cta": {
         "label": "Start a project",
@@ -173,6 +190,20 @@
         "drawer": "Navigation menu"
       },
       "languageLabel": "Choose language"
+    },
+    "ai": {
+      "title": "AI Assistant",
+      "description": "Ask our AI assistant about the product, pricing and features.",
+      "eyebrow": "AI",
+      "heading": "Ask about our product",
+      "intro": "Got a question? Our AI assistant will answer straight away.",
+      "placeholder": "Type a message...",
+      "send": "Send",
+      "stop": "Stop",
+      "greeting": "Hi! How can I help?",
+      "empty": "Ask anything about the product, or pick a question below.",
+      "suggestions": ["What does it do?", "How much does it cost?", "Who is it for?"],
+      "error": "Something went wrong. Please try again."
     },
     "sections": {
       "nova-hero-wireframe": {
@@ -271,7 +302,8 @@
         { "label": "About us", "href": "#zespol" },
         { "label": "Services", "href": "#services" },
         { "label": "Selected work", "href": "#realizacje" },
-        { "label": "Reviews", "href": "#opinie" }
+        { "label": "Reviews", "href": "#opinie" },
+        { "label": "AI", "href": "/ai/" }
       ],
       "ariaLegal": "Legal documents",
       "ariaNavigation": "Footer navigation",
