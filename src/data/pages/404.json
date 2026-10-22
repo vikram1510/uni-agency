@@ -11,7 +11,7 @@
   "cta2": {
     "label": "Contact us",
     "hover": "Write to us",
-    "href": "#kontakt"
+    "href": "/#contact"
   },
   "seo": {
     "title": "Page not found",

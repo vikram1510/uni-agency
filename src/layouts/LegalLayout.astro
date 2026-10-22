@@ -13,7 +13,7 @@ interface Props {
 }
 
 const { title, description, lastUpdated, locale = "en" } = Astro.props;
-const legalCopy = legalData[locale] ?? legalData.en;
+const legalCopy = legalData.en;
 const homeHref = getNovaNavigationPath("/", locale);
 const contactHref = getNovaNavigationPath(legalCopy.legalContactHref, locale);
 ---

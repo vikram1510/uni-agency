@@ -16,7 +16,7 @@ const resolvedDescription = description || fallback?.description || "";
 const columns = [list, [...list.slice(2), ...list.slice(0, 2)], [...list.slice(1), ...list.slice(0, 1)]];
 ---
 
-<Section id={sectionId === "testimonial-v2" ? "opinie" : sectionId} tone="page" class:list={["overflow-hidden", className]}>
+<Section id={sectionId === "testimonial-v2" ? "reviews" : sectionId} tone="page" class:list={["overflow-hidden", className]}>
   <div class="ui-container">
     <div data-motion-sequence="viewport" data-motion-profile="soft">
       <SectionHeader title={resolvedTitle} description={resolvedDescription} titleTag="h2" align="center" class="mx-auto max-w-3xl" />

@@ -16,7 +16,7 @@ const linkHref = props.linkHref ?? jsonData.linkHref;
 const items = props.items ?? jsonData.items;
 ---
 
-<Section id={props.id ?? (props.locale === "pl" ? "uslugi" : "services")} tone="page" class:list={["services-section", props.class]}>
+<Section id={props.id ?? "services"} tone="page" class:list={["services-section", props.class]}>
   <Container class="w-full max-w-none px-[clamp(1.5rem,5vw,5rem)]">
     <div class="nova-services-intro">
       <div>

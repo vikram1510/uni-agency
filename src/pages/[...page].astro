@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import PageBuilder from "@components/PageBuilder.astro";
 import type { PageConfig } from "@/types/config";
 import { pageModules } from "@data/pages/_registry";
-import { BUILD_SCOPE, SITE_LOCALE } from "../../site.config.mjs";
+import { BUILD_SCOPE } from "../../site.config.mjs";
 import { isPageAllowed, getFullBleedTop } from "@utils/page-scope";
 import { ACTIVE_TEMPLATE } from "@/config/template";
 import { getNovaCopy, type NovaLocale } from "@utils/nova-i18n";
@@ -44,7 +44,7 @@ if (!config) {
 }
 
 const { seo, layout: layoutConfig } = config;
-const locale: NovaLocale = SITE_LOCALE === "en" ? "en" : "pl";
+const locale: NovaLocale = "en";
 const novaPageCopy = ACTIVE_TEMPLATE === "nova" && slug === "index" ? getNovaCopy(locale).page : undefined;
 const resolvedTitle = novaPageCopy?.title ?? seo?.title;
 const resolvedDescription = novaPageCopy?.description ?? seo?.description;

@@ -7,8 +7,8 @@ interface Props {
   locale?: NovaLocale;
 }
 
-const { locale = "pl" } = Astro.props as Props;
-const id = locale === "pl" ? "kontakt" : "contact";
+const { locale = "en" } = Astro.props as Props;
+const id = "contact";
 const copy = getNovaCopy(locale).footer;
 const footerLinks = copy.footerLinks.map((link) => ({ ...link, href: getNovaNavigationPath(link.href, locale) }));
 const legalLinks = copy.legalLinks.map((link) => ({ ...link, href: getNovaNavigationPath(link.href, locale) }));

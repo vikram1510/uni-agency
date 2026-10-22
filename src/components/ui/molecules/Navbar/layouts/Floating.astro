@@ -1,9 +1,7 @@
 ---
 import Logo from "@components/ui/atoms/Logo.astro";
 import MenuToggle from "@components/ui/molecules/Navbar/shared/MenuToggle.astro";
-import LanguageSwitch from "@components/ui/molecules/Navbar/shared/LanguageSwitch.astro";
 import type { NavTheme } from "@components/ui/molecules/Navbar/shared/nav-theme-classes";
-import { formatInternalLink } from "@utils/url";
 import { getNovaCopy, getNovaNavigationPath, type NovaLocale } from "@utils/nova-i18n";
 
 export interface Props {
@@ -11,7 +9,7 @@ export interface Props {
 	locale?: NovaLocale;
 }
 
-const { theme = "light", locale = "pl" } = Astro.props;
+const { theme = "light", locale = "en" } = Astro.props;
 const headerData = getNovaCopy(locale).navigation;
 
 // Why: floating navbar has two visual states. It's at the top of the page
@@ -66,11 +64,10 @@ const fixedShellClass = isDark
 			</nav>
 
 			<div class="relative z-[1010] flex shrink-0 items-center gap-2 sm:gap-3">
-				<LanguageSwitch locale={locale} />
 				<!-- Dlaczego: globalny wzorzec przycisku (ui-button ui-button-primary ui-nav-cta)
          instead of raw classes. Gives consistent hover (text swap + color slide) and dimensions
 				     z core.css. Wzorzec z NavbarMainCentered (layout Centered). -->
-				<a href={formatInternalLink(headerData.cta.href)} class="ui-button ui-button-primary ui-nav-cta hidden sm:flex">
+				<a href={getNovaNavigationPath(headerData.cta.href, locale)} class="ui-button ui-button-primary ui-nav-cta hidden sm:flex">
 					<span class="ui-button-text-wrap">
 						<span class="ui-button-text-default">{headerData.cta.label}</span>
 						<span class="ui-button-text-hover">{headerData.cta.hoverLabel}</span>
@@ -107,8 +104,7 @@ const fixedShellClass = isDark
 			</nav>
 
 			<div class="relative z-[1010] flex shrink-0 items-center gap-2 sm:gap-3">
-				<LanguageSwitch locale={locale} />
-				<a href={formatInternalLink(headerData.cta.href)} class="ui-button ui-button-primary ui-nav-cta hidden sm:flex">
+				<a href={getNovaNavigationPath(headerData.cta.href, locale)} class="ui-button ui-button-primary ui-nav-cta hidden sm:flex">
 					<span class="ui-button-text-wrap">
 						<span class="ui-button-text-default">{headerData.cta.label}</span>
 						<span class="ui-button-text-hover">{headerData.cta.hoverLabel}</span>

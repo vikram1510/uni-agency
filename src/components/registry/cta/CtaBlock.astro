@@ -20,7 +20,7 @@ const image = props.image ?? fallback?.image;
 const imageAlt = props.imageAlt ?? fallback?.imageAlt ?? "";
 ---
 
-<Section id={props.id ?? (props.locale === "pl" ? "kontakt" : "contact")} tone="page" class:list={["cta-section", props.class]}>
+<Section id={props.id ?? "contact"} tone="page" class:list={["cta-section", props.class]}>
   <Container class="w-full max-w-none px-[clamp(1.5rem,5vw,5rem)]">
     <div class="nova-cta-frame" style={`background-image: url('${image}')`}>
       <div class="nova-cta-copy">

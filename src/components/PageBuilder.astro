@@ -23,7 +23,7 @@ const dataModules = import.meta.glob<SectionJsonModule>("/src/data/sections/**/*
 // Why: one helper applies to both the page renderer and the Studio directory.
 const sectionDataCache = createSectionDataCache(dataModules);
 
-const { heading, sections, locale = "pl" } = Astro.props;
+const { heading, sections, locale = "en" } = Astro.props;
 
 const hasHeroSection = sections.some((s) => (HERO_SECTION_IDS as readonly string[]).includes(s.id));
 
@@ -67,7 +67,7 @@ function resolveSection(section: PageSection): Resolved | null {
   if (ACTIVE_TEMPLATE === "nova") {
     const localized = getNovaSectionCopy(locale, variant.dataKey);
     if (localized) props = { ...props, ...localized };
-    if (section.id === "novaServices" && !props.id) props.id = locale === "pl" ? "uslugi" : "services";
+    if (section.id === "novaServices" && !props.id) props.id = "services";
   }
 
   return { component: Component, props };

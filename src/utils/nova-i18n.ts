@@ -1,14 +1,14 @@
 import copy from '@data/i18n/nova.json';
 
-export type NovaLocale = 'pl' | 'en';
+export type NovaLocale = 'en';
 
-export function getNovaCopy(locale: NovaLocale = 'pl') {
-  return copy[locale] ?? copy.pl;
+export function getNovaCopy(_locale: NovaLocale = 'en') {
+  return copy.en;
 }
 
 export function getNovaSectionCopy(locale: NovaLocale, dataKey?: string) {
   if (!dataKey) return undefined;
-  return getNovaCopy(locale).sections[dataKey as keyof typeof copy.pl.sections];
+  return getNovaCopy(locale).sections[dataKey as keyof typeof copy.en.sections];
 }
 
 function withNovaBase(path: string): string {
@@ -19,16 +19,11 @@ function withNovaBase(path: string): string {
   return `${base}${path}` || '/';
 }
 
-export function getNovaLocalePath(locale: NovaLocale): string {
-  return withNovaBase(locale === 'en' ? '/' : '/pl/');
-}
-
-export function getNovaNavigationPath(href: string, locale: NovaLocale): string {
-  if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+export function getNovaNavigationPath(href: string, _locale: NovaLocale = 'en'): string {
+  if (href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
     return href;
   }
+  if (href.startsWith('#')) return withNovaBase(`/${href}`);
 
-  const normalized = href.startsWith('/') ? href : `/${href}`;
-  if (locale === 'en') return withNovaBase(normalized);
-  return withNovaBase(normalized === '/' ? '/pl/' : `/pl${normalized}`);
+  return withNovaBase(href.startsWith('/') ? href : `/${href}`);
 }

@@ -5,14 +5,6 @@
     "legalFaqTitle": "Questions about legal matters?",
     "legalFaqText": "Contact us directly and we will clarify any doubts.",
     "legalContactCta": "Go to contact",
-    "legalContactHref": "/#kontakt"
-  },
-  "pl": {
-    "updatedLabel": "Ostatnia aktualizacja:",
-    "legalBackLabel": "Wróć na stronę główną",
-    "legalFaqTitle": "Masz pytania dotyczące dokumentów prawnych?",
-    "legalFaqText": "Skontaktuj się z nami bezpośrednio, a wyjaśnimy wszystkie wątpliwości.",
-    "legalContactCta": "Przejdź do kontaktu",
-    "legalContactHref": "/#kontakt"
+    "legalContactHref": "/#contact"
   }
 }

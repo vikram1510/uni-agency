@@ -6,7 +6,7 @@ interface Props {
 	locale?: NovaLocale;
 }
 
-const { mobileOnly = true, locale = "pl" } = Astro.props;
+const { mobileOnly = true, locale = "en" } = Astro.props;
 const headerData = getNovaCopy(locale).navigation;
 ---
 
