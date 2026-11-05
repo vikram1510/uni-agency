@@ -28,7 +28,7 @@
         },
         { "label": "Universities", "href": "/universities/" },
         { "label": "Student Finance", "href": "/student-finance/" },
-        { "label": "Contact", "href": "#contact" }
+        { "label": "Contact", "href": "/book/" }
       ],
       "cta": {
         "label": "Find your course",
@@ -119,7 +119,7 @@
         "teamAriaLabel": "Our advisors",
         "teamAvatars": [],
         "buttonLabel": "Book a free consultation",
-        "buttonHref": "#contact"
+        "buttonHref": "/book/"
       },
       "faq3": {
         "title": "Frequently asked questions",
@@ -139,7 +139,7 @@
       "heading": "Let's find your course",
       "description": "Book a free consultation and we'll help you find the right university and course for you.",
       "primaryLabel": "Book a free consultation",
-      "primaryHref": "#contact",
+      "primaryHref": "/book/",
       "secondaryLabel": "Browse courses",
       "secondaryHref": "/courses/",
       "legalLinks": [

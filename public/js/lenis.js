@@ -92,6 +92,7 @@
       touchMultiplier: 0.7,
       infinite: false,
       anchors: false,
+      allowNestedScroll: true,
       // Elements with data-lenis-prevent (textarea, floating buttons) have their own scroll,
       // Lenis should not intercept them. Lenis 1.3.25 also supports this attribute
       // natively, the prevent function is an extra safeguard for descendants.

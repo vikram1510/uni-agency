@@ -8,6 +8,7 @@ import {
   ConversationScrollButton,
 } from "@/components/ai-elements/conversation"
 import { MessageResponse } from "@/components/ai-elements/message"
+import LeadForm from "@/components/leads/LeadForm"
 import { cn } from "@/lib/utils"
 
 type ChatCopy = {
@@ -38,22 +39,35 @@ function AssistantAvatar() {
 type ConsultationOffer = { course: string; coursePath?: string; summary: string }
 
 function ConsultationCard({ offer }: { offer: ConsultationOffer }) {
+  const [open, setOpen] = useState(false)
+  const generalAdvice = offer.course === "General advice"
+
   return (
     <div className="mt-3 rounded-2xl border border-brand-dark/10 bg-brand-dark/[0.03] p-4">
       <p className="text-xs font-semibold uppercase tracking-wide text-brand-dark/50">Free consultation</p>
       <p className="mt-1 font-semibold text-brand-dark">
-        {offer.course === "General advice" ? "Talk it through with an advisor" : `Talk to an advisor about ${offer.course}`}
+        {generalAdvice ? "Talk it through with an advisor" : `Talk to an advisor about ${offer.course}`}
       </p>
-      <div className="mt-3 flex flex-wrap gap-2">
-        <a href="/#contact" className="rounded-full bg-brand-dark px-4 py-2 text-sm font-semibold text-white hover:opacity-85">
-          Book a free consultation
-        </a>
-        {offer.coursePath?.startsWith("/courses/") && (
-          <a href={offer.coursePath} className="rounded-full border border-brand-dark/15 px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-dark/5">
-            View course
-          </a>
-        )}
-      </div>
+      {open ? (
+        <div className="mt-3">
+          <LeadForm source="chat" course={generalAdvice ? undefined : offer.course} summary={offer.summary} compact />
+        </div>
+      ) : (
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="rounded-full bg-brand-dark px-4 py-2 text-sm font-semibold text-white hover:opacity-85"
+          >
+            Book a free consultation
+          </button>
+          {offer.coursePath?.startsWith("/courses/") && (
+            <a href={offer.coursePath} className="rounded-full border border-brand-dark/15 px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-dark/5">
+              View course
+            </a>
+          )}
+        </div>
+      )}
     </div>
   )
 }
@@ -110,7 +124,6 @@ export default function Chat({ copy, variant = "page", readQueryParam = false }:
 
   return (
     <div
-      data-lenis-prevent
       className={cn(
         "flex flex-col overflow-hidden bg-white",
         variant === "page"

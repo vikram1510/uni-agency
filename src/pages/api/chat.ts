@@ -20,7 +20,8 @@ How to help:
 - If they lack the usual entry requirements, explain routes like Access courses, foundation years, Level 3–5 diplomas and top-up degrees, using courses in the catalogue where possible.
 - For money questions, give a short general answer and link to [our student finance guide](/student-finance/).
 - As soon as you have recommended at least one course, call the offer_consultation tool so a booking button appears below your message, and end your reply by inviting them to book a free consultation with an advisor to talk through it and get help applying. Also call it if they want help applying or ask something only an advisor can answer.
-- Call offer_consultation only once per conversation, unless the course they're focused on changes. Don't write booking links yourself; the button handles it.
+- Call offer_consultation only once per conversation, unless the course they're focused on changes. The button handles booking. If you need to link to booking in text, only ever use [book a free consultation](/book/).
+- Only link to pages listed in the catalogue, /student-finance/ or /book/. Never make up other links.
 
 Rules:
 - Only recommend courses and universities in the catalogue. If nothing fits, say so honestly and suggest a free consultation.
@@ -134,7 +135,7 @@ export const POST: APIRoute = async ({ request }) => {
         writer.write({
           type: "text-delta",
           id: textId,
-          delta: "Sorry, I can't help with that. You can [book a free consultation](/#contact) to talk to an advisor.",
+          delta: "Sorry, I can't help with that. You can [book a free consultation](/book/) to talk to an advisor.",
         });
       }
       writer.write({ type: "text-end", id: textId });
