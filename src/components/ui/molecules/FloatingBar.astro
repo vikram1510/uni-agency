@@ -17,7 +17,7 @@ const { ariaBackToTop, ariaWhatsApp, ariaCall = "", ariaFacebook = "" } = Astro.
 // so the fallback is company.phone (always present in company data).
 const whatsappNumber = (company as any).whatsapp || company.phone;
 const phoneRaw = whatsappNumber.replace(/\D/g, "");
-const whatsappHref = `https://wa.me/${phoneRaw}`;
+const whatsappHref = phoneRaw ? `https://wa.me/${phoneRaw}` : "";
 const phoneHref = `tel:+${phoneRaw}`;
 const facebookHref = company.socials?.facebook || "";
 const backToTopLabel = ariaBackToTop || floatingBar.ariaBackToTop || "";
@@ -26,7 +26,7 @@ const whatsAppLabel = ariaWhatsApp || floatingBar.ariaWhatsApp || "";
 
 <div
   id="floating-bar"
-  class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 opacity-0 translate-y-4 pointer-events-none transition-all duration-500 ease-out sm:bottom-6 sm:right-6 sm:gap-2.5"
+  class="fixed bottom-4 left-4 z-50 flex flex-col gap-2 opacity-0 translate-y-4 pointer-events-none transition-all duration-500 ease-out sm:bottom-6 sm:left-6 sm:gap-2.5"
   style="margin-bottom:env(safe-area-inset-bottom)"
 >
     <button

@@ -19,6 +19,9 @@ export default defineConfig({
 
   site: SITE_URL,
   base: undefined,
+  redirects: {
+    '/ai': '/find-your-course/',
+  },
   compressHTML: true,
 
   image: {

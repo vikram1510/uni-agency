@@ -1,6 +1,6 @@
-import { useState, type FormEvent, type KeyboardEvent } from "react"
+import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react"
 import { useChat } from "@ai-sdk/react"
-import { ArrowUpIcon, SparklesIcon, SquareIcon } from "lucide-react"
+import { ArrowUpIcon, GraduationCapIcon, SquareIcon } from "lucide-react"
 
 import {
   Conversation,
@@ -18,12 +18,19 @@ type ChatCopy = {
   empty: string
   suggestions: string[]
   error: string
+  disclaimer: string
+}
+
+type ChatProps = {
+  copy: ChatCopy
+  variant?: "page" | "panel"
+  readQueryParam?: boolean
 }
 
 function AssistantAvatar() {
   return (
     <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-dark text-white">
-      <SparklesIcon className="size-4" />
+      <GraduationCapIcon className="size-4" />
     </div>
   )
 }
@@ -42,10 +49,22 @@ function TypingDots() {
   )
 }
 
-export default function Chat({ copy }: { copy: ChatCopy }) {
+export default function Chat({ copy, variant = "page", readQueryParam = false }: ChatProps) {
   const { messages, sendMessage, status, stop, error } = useChat()
   const [input, setInput] = useState("")
   const busy = status === "submitted" || status === "streaming"
+  const sentInitial = useRef(false)
+
+  useEffect(() => {
+    if (!readQueryParam || sentInitial.current) return
+    const url = new URL(window.location.href)
+    const question = url.searchParams.get("q")?.trim().slice(0, 2000)
+    if (!question) return
+    sentInitial.current = true
+    url.searchParams.delete("q")
+    history.replaceState(history.state, "", url)
+    sendMessage({ text: question })
+  }, [readQueryParam, sendMessage])
 
   const send = (value: string) => {
     const text = value.trim()
@@ -67,11 +86,23 @@ export default function Chat({ copy }: { copy: ChatCopy }) {
   }
 
   return (
-    <div className="flex h-[70vh] min-h-[28rem] flex-col overflow-hidden rounded-3xl border border-brand-dark/10 bg-white shadow-xl shadow-brand-dark/5">
+    <div
+      className={cn(
+        "flex flex-col overflow-hidden bg-white",
+        variant === "page"
+          ? "h-[70vh] min-h-[28rem] rounded-3xl border border-brand-dark/10 shadow-xl shadow-brand-dark/5"
+          : "h-full",
+      )}
+    >
       <Conversation className="flex-1">
         <ConversationContent className="gap-6 px-4 py-6 sm:px-6">
           {messages.length === 0 ? (
-            <div className="flex min-h-[20rem] flex-col items-center justify-center gap-6 text-center">
+            <div
+              className={cn(
+                "flex flex-col items-center justify-center gap-6 text-center",
+                variant === "page" ? "min-h-[20rem]" : "min-h-[16rem]",
+              )}
+            >
               <AssistantAvatar />
               <div className="space-y-1.5">
                 <p className="text-lg font-semibold text-brand-dark">{copy.greeting}</p>
@@ -152,6 +183,7 @@ export default function Chat({ copy }: { copy: ChatCopy }) {
             {busy ? <SquareIcon className="size-3.5 fill-current" /> : <ArrowUpIcon className="size-4" />}
           </button>
         </div>
+        <p className="mt-2 text-center text-xs text-brand-dark/50">{copy.disclaimer}</p>
       </form>
     </div>
   )

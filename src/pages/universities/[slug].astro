@@ -81,7 +81,10 @@ const { name, locations, summary, description, levels, subjects, website } = uni
       <div class="mt-14 rounded-2xl bg-brand-dark p-8 text-center text-brand-light">
         <h2 class="mb-2 text-2xl font-semibold">Thinking about {name}?</h2>
         <p class="mb-6 text-brand-light/80">Talk to an advisor about courses, entry requirements and student finance. It's free.</p>
-        <Button href="/#contact" variant="accent">Book a free consultation</Button>
+        <div class="flex flex-col justify-center gap-3 sm:flex-row">
+          <Button href="/#contact" variant="accent">Book a free consultation</Button>
+          <Button href={`/find-your-course/?q=${encodeURIComponent(`Is ${name} right for me?`)}`} variant="outline" class="!border-brand-light/60 !bg-transparent !text-brand-light">Is this right for me?</Button>
+        </div>
       </div>
     </Container>
   </Section>

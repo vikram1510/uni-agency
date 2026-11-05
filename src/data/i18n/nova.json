@@ -33,7 +33,7 @@
       "cta": {
         "label": "Find your course",
         "hoverLabel": "Let's start",
-        "href": "/ai/"
+        "href": "/find-your-course/"
       },
       "aria": {
         "menuOpen": "Open navigation menu",
@@ -44,18 +44,22 @@
       }
     },
     "ai": {
-      "title": "AI Assistant",
-      "description": "Ask our AI assistant about the product, pricing and features.",
-      "eyebrow": "AI",
-      "heading": "Ask about our product",
-      "intro": "Got a question? Our AI assistant will answer straight away.",
-      "placeholder": "Type a message...",
+      "title": "Find your course",
+      "description": "Answer a few quick questions and get matched with UK university courses that suit you.",
+      "eyebrow": "Find your course",
+      "heading": "Let's find the right course for you",
+      "intro": "Tell us what you'd like to study and what you've done so far. We'll suggest courses and universities that fit.",
+      "placeholder": "Type your answer...",
       "send": "Send",
       "stop": "Stop",
-      "greeting": "Hi! How can I help?",
-      "empty": "Ask anything about the product, or pick a question below.",
-      "suggestions": ["What does it do?", "How much does it cost?", "Who is it for?"],
-      "error": "Something went wrong. Please try again."
+      "greeting": "Hi! What would you like to study?",
+      "empty": "Pick one to get started, or type your own.",
+      "suggestions": ["I want to study nursing", "I don't have A-levels", "I have an HND and want a degree", "I'm not sure what to study"],
+      "error": "Something went wrong. Please try again.",
+      "disclaimer": "Instant answers. An advisor can follow up after a free consultation.",
+      "bubbleOpen": "Need help?",
+      "bubbleClose": "Close",
+      "bubbleTitle": "Find your course"
     },
     "sections": {
       "nova-hero-wireframe": {
@@ -63,7 +67,7 @@
         "heading": "Find the right",
         "headingAccent": "university and course",
         "description": "Free, personal guidance for school leavers and mature students. We help you choose a course, apply and sort out student finance.",
-        "primaryCTA": { "label": "Find your course", "href": "/ai/" },
+        "primaryCTA": { "label": "Find your course", "href": "/find-your-course/" },
         "secondaryCTA": { "label": "Browse universities", "href": "/universities/" },
         "trustedBy": "Universities we work with",
         "trustItems": ["ARU", "GREENWICH", "TEESSIDE", "LJMU", "BOLTON"],
@@ -147,7 +151,7 @@
         { "label": "Courses", "href": "/courses/" },
         { "label": "Universities", "href": "/universities/" },
         { "label": "Student Finance", "href": "/student-finance/" },
-        { "label": "Find your course", "href": "/ai/" }
+        { "label": "Find your course", "href": "/find-your-course/" }
       ],
       "ariaLegal": "Legal documents",
       "ariaNavigation": "Footer navigation",

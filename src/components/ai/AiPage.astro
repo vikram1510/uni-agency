@@ -23,15 +23,16 @@ const copy = getNovaCopy(locale).ai;
   navbarVariant="floating"
   footerVariant="nova"
   fullBleedTop
+  showHelpBubble={false}
 >
   <Section tone="page" class="pt-32 pb-20 md:pt-40 md:pb-28">
     <Container class="max-w-3xl">
-      <div class="mb-10 text-center">
+      <div class="mb-10 text-center" data-motion="fade">
         <Text variant="accent-label" class="mb-3">{copy.eyebrow}</Text>
         <Heading tag="h1" variant="section-title" class="mb-4">{copy.heading}</Heading>
         <Text variant="lead">{copy.intro}</Text>
       </div>
-      <Chat client:idle copy={copy} />
+      <Chat client:load copy={copy} readQueryParam />
     </Container>
   </Section>
 </Layout>

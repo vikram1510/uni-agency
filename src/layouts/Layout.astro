@@ -21,7 +21,8 @@ import FooterColumnsBlock from '@components/registry/shell/FooterColumnsBlock.as
 import FooterMinimalBlock from '@components/registry/shell/FooterMinimalBlock.astro';
 import FooterPromoBlock from '@components/registry/shell/FooterPromoBlock.astro';
 import NovaFooterBlock from '@components/registry/shell/NovaFooterBlock.astro';
-import type { NovaLocale } from '@utils/nova-i18n';
+import { getNovaCopy, type NovaLocale } from '@utils/nova-i18n';
+import HelpBubble from '@components/ai/HelpBubble';
 
 
 interface Props {
@@ -52,6 +53,8 @@ interface Props {
 	clientRuntime?: boolean;
 	/** Enables Lenis smooth scroll only on pages that need it. */
 	enableLenis?: boolean;
+	/** Shows the "Need help?" course finder bubble. */
+	showHelpBubble?: boolean;
 }
 
 // Staging/Netlify preview should be noindex even when seo.index = true.
@@ -82,6 +85,7 @@ const {
 	showShell = true,
 	clientRuntime = true,
 	enableLenis = true,
+	showHelpBubble = true,
 } = Astro.props;
 
 // Meta robots value: noindex wins, for public pages follow from seo.json decides.
@@ -363,6 +367,9 @@ const mainPaddingStyle = fullBleedTop
 		{clientRuntime && hasOptionalTracking && <CookieConsent />}
 	        {clientRuntime && <Toast />}
 	        {clientRuntime && <FloatingBar />}
+	        {clientRuntime && showShell && showHelpBubble && (
+	        	<HelpBubble client:idle transition:persist="help-bubble" copy={getNovaCopy(locale).ai} />
+	        )}
 	        {clientRuntime && <ImageLightbox />}
 	{
 		// Custom code from client at page end (chat widgets, scripts loaded at end).
