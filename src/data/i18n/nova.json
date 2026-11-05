@@ -14,9 +14,20 @@
     },
     "navigation": {
       "menu": [
-        { "label": "About", "href": "#about" },
-        { "label": "Courses", "href": "/courses/" },
+        { "label": "About", "href": "/about/" },
+        {
+          "label": "Courses",
+          "href": "/courses/",
+          "children": [
+            { "label": "Undergraduate", "href": "/courses/undergraduate/" },
+            { "label": "Postgraduate", "href": "/courses/postgraduate/" },
+            { "label": "Level 6 Top-Up", "href": "/courses/top-up/" },
+            { "label": "Level 3–5 Diploma", "href": "/courses/foundation/" },
+            { "label": "All courses", "href": "/courses/" }
+          ]
+        },
         { "label": "Universities", "href": "/universities/" },
+        { "label": "Student Finance", "href": "/student-finance/" },
         { "label": "Contact", "href": "#contact" }
       ],
       "cta": {
@@ -132,9 +143,10 @@
         { "label": "Cookies", "href": "/cookies/" }
       ],
       "footerLinks": [
-        { "label": "About", "href": "#about" },
+        { "label": "About", "href": "/about/" },
         { "label": "Courses", "href": "/courses/" },
         { "label": "Universities", "href": "/universities/" },
+        { "label": "Student Finance", "href": "/student-finance/" },
         { "label": "Find your course", "href": "/ai/" }
       ],
       "ariaLegal": "Legal documents",

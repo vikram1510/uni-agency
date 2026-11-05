@@ -1,6 +1,7 @@
 ---
 import Logo from "@components/ui/atoms/Logo.astro";
 import MenuToggle from "@components/ui/molecules/Navbar/shared/MenuToggle.astro";
+import DesktopNav from "@components/ui/molecules/Navbar/shared/DesktopNav.astro";
 import type { NavTheme } from "@components/ui/molecules/Navbar/shared/nav-theme-classes";
 import { getNovaCopy, getNovaNavigationPath, type NovaLocale } from "@utils/nova-i18n";
 
@@ -55,13 +56,7 @@ const fixedShellClass = isDark
 				<Logo variant={isDark ? "light" : "dark"} density="compact" />
 			</a>
 
-			<nav class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
-				{headerData.menu.map((item) => (
-					<a href={getNovaNavigationPath(item.href, locale)} class="ui-nav-bar-link shrink-0 opacity-75 transition-opacity hover:opacity-100">
-						{item.label}
-					</a>
-				))}
-			</nav>
+			<DesktopNav locale={locale} />
 
 			<div class="relative z-[1010] flex shrink-0 items-center gap-2 sm:gap-3">
 				<!-- Dlaczego: globalny wzorzec przycisku (ui-button ui-button-primary ui-nav-cta)
@@ -95,13 +90,7 @@ const fixedShellClass = isDark
 				<Logo variant={isDark ? "light" : "dark"} density="compact" />
 			</a>
 
-			<nav class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
-				{headerData.menu.map((item) => (
-					<a href={getNovaNavigationPath(item.href, locale)} class="ui-nav-bar-link shrink-0 opacity-75 transition-opacity hover:opacity-100">
-						{item.label}
-					</a>
-				))}
-			</nav>
+			<DesktopNav locale={locale} />
 
 			<div class="relative z-[1010] flex shrink-0 items-center gap-2 sm:gap-3">
 				<a href={getNovaNavigationPath(headerData.cta.href, locale)} class="ui-button ui-button-primary ui-nav-cta hidden sm:flex">

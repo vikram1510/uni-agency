@@ -1,0 +1,38 @@
+---
+import { getNovaCopy, getNovaNavigationPath, type NovaLocale } from "@utils/nova-i18n";
+
+interface Props {
+	locale?: NovaLocale;
+}
+
+type MenuItem = { label: string; href: string; children?: { label: string; href: string }[] };
+
+const { locale = "en" } = Astro.props;
+const menu = getNovaCopy(locale).navigation.menu as MenuItem[];
+---
+
+<nav class="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
+	{menu.map((item) =>
+		item.children?.length ? (
+			<div class="group relative">
+				<a href={getNovaNavigationPath(item.href, locale)} class="ui-nav-bar-link inline-flex shrink-0 items-center gap-1 opacity-75 transition-opacity hover:opacity-100" aria-haspopup="true">
+					{item.label}
+					<svg class="size-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+				</a>
+				<div class="invisible absolute left-1/2 top-full z-[1020] -translate-x-1/2 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+					<ul class="grid min-w-56 gap-1 rounded-2xl border border-brand-dark/10 bg-[var(--color-surface)] p-2 text-brand-dark shadow-xl">
+						{item.children.map((child) => (
+							<li>
+								<a href={getNovaNavigationPath(child.href, locale)} class="block rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-brand-dark/5">{child.label}</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+		) : (
+			<a href={getNovaNavigationPath(item.href, locale)} class="ui-nav-bar-link shrink-0 opacity-75 transition-opacity hover:opacity-100">
+				{item.label}
+			</a>
+		)
+	)}
+</nav>
