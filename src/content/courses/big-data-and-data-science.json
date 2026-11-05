@@ -1,0 +1,18 @@
+{
+  "title": "Big Data & Data Science",
+  "level": "postgraduate",
+  "subject": "Computing",
+  "summary": "Learn to collect, analyse and visualise large data sets to support decisions.",
+  "description": [
+    "You learn the tools and techniques data scientists use, from programming and statistics to machine learning and cloud platforms.",
+    "Data skills are in demand across almost every industry."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:2 or above), ideally in a subject with maths or computing"
+  ],
+  "modules": ["Programming for data science", "Statistics", "Machine learning", "Big data platforms", "Dissertation"],
+  "careers": ["Data scientist", "Data analyst", "Data engineer", "Business intelligence analyst"],
+  "universities": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Biological Sciences",
+  "level": "undergraduate",
+  "subject": "Life Sciences",
+  "summary": "Explore living things from cells and genes to ecosystems, with plenty of lab and field work.",
+  "description": [
+    "A broad biology degree that lets you explore different areas before specialising, such as genetics, ecology or microbiology.",
+    "You build practical lab skills that lead to careers in science, health and the environment."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels or equivalent Level 3, including Biology",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Cell biology", "Genetics", "Ecology", "Microbiology", "Research project"],
+  "careers": ["Laboratory scientist", "Research assistant", "Environmental consultant", "Science teacher"],
+  "universities": ["durham-university", "university-of-leeds", "royal-holloway-university-of-london", "bangor-university", "liverpool-john-moores-university"]
+}

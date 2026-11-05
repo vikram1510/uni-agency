@@ -1,0 +1,18 @@
+{
+  "title": "Applied Computing (Top-Up)",
+  "level": "top-up",
+  "subject": "Computing",
+  "summary": "Turn your HND or Foundation Degree in computing into a full bachelor's degree in one year.",
+  "description": [
+    "This final-year course builds on your Level 5 computing qualification, adding advanced topics and a major project.",
+    "You graduate with a BSc (Hons), opening up graduate jobs and master's study."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in computing or a related subject"
+  ],
+  "modules": ["Advanced programming", "Cloud computing", "Cyber security", "Project management", "Honours project"],
+  "careers": ["Software developer", "IT analyst", "Network engineer", "Web developer"],
+  "universities": []
+}

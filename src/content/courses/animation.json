@@ -1,0 +1,20 @@
+{
+  "title": "Animation",
+  "level": "undergraduate",
+  "subject": "Animation & Games",
+  "summary": "Develop 2D, 3D and stop-motion animation skills and build a portfolio for the creative industries.",
+  "description": [
+    "You learn the craft of animation, from drawing and storytelling to industry software for 3D and visual effects.",
+    "Most of the course is project-based, so you graduate with a showreel to take to studios."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3), ideally in an art or design subject",
+    "A portfolio of creative work",
+    "GCSE English at grade 4/C or above"
+  ],
+  "modules": ["Drawing for animation", "3D modelling and animation", "Storyboarding", "Character animation", "Final major project"],
+  "careers": ["Animator", "3D artist", "Storyboard artist", "Motion designer"],
+  "universities": ["ravensbourne-university-london", "teesside-university"]
+}

@@ -1,7 +1,7 @@
 // Dlaczego: definicja kolekcji Content Collections w Astro v7
 // Astro v7 uzywa nowego API z `loader` zamiast `type: "content"`
 // `glob()` loader automatycznie wykrywa pliki markdown w podanym katalogu
-import { defineCollection } from "astro:content";
+import { defineCollection, reference } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
@@ -16,6 +16,8 @@ const blogCollection = defineCollection({
   }),
 });
 
+const levelSchema = z.enum(["foundation", "undergraduate", "top-up", "postgraduate"]);
+
 const universitiesCollection = defineCollection({
   loader: glob({ pattern: "*.json", base: "./src/content/universities" }),
   schema: z.object({
@@ -23,14 +25,32 @@ const universitiesCollection = defineCollection({
     locations: z.array(z.string()).min(1),
     summary: z.string(),
     description: z.array(z.string()).min(1),
-    levels: z.array(z.enum(["foundation", "undergraduate", "top-up", "postgraduate"])).min(1),
+    levels: z.array(levelSchema).min(1),
     subjects: z.array(z.string()).min(1),
-    website: z.string().url(),
+    website: z.url(),
     featured: z.boolean().default(false),
+  }),
+});
+
+const coursesCollection = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/courses" }),
+  schema: z.object({
+    title: z.string(),
+    level: levelSchema,
+    subject: z.string(),
+    summary: z.string(),
+    description: z.array(z.string()).min(1),
+    duration: z.string(),
+    intakes: z.array(z.string()).min(1),
+    entryRequirements: z.array(z.string()).min(1),
+    modules: z.array(z.string()).default([]),
+    careers: z.array(z.string()).default([]),
+    universities: z.array(reference("universities")).default([]),
   }),
 });
 
 export const collections = {
   blog: blogCollection,
   universities: universitiesCollection,
+  courses: coursesCollection,
 };

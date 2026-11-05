@@ -1,0 +1,18 @@
+{
+  "title": "Applied Sciences",
+  "level": "postgraduate",
+  "subject": "Science",
+  "summary": "A flexible science master's focused on applying research to real-world problems.",
+  "description": [
+    "This course lets science graduates build advanced practical and research skills, often with a choice of specialist topics.",
+    "It is a good route into industry, laboratory or research careers."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:2 or above) in a science subject"
+  ],
+  "modules": ["Research methods", "Laboratory techniques", "Data analysis", "Specialist option", "Dissertation"],
+  "careers": ["Research scientist", "Laboratory analyst", "Quality control scientist", "Science consultant"],
+  "universities": []
+}

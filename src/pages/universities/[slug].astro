@@ -5,14 +5,21 @@ import Container from "@components/ui/layout/Container.astro";
 import Heading from "@components/ui/atoms/Heading.astro";
 import Text from "@components/ui/atoms/Text.astro";
 import Button from "@components/ui/atoms/Button.astro";
-import { getUniversities, levelLabels, type University } from "@utils/universities";
+import { getUniversities, type University } from "@utils/universities";
+import { coursePath, getCourses, levelLabels, type Course } from "@utils/courses";
 
 export async function getStaticPaths() {
-  const universities = await getUniversities();
-  return universities.map((uni) => ({ params: { slug: uni.id }, props: { uni } }));
+  const [universities, allCourses] = await Promise.all([getUniversities(), getCourses()]);
+  return universities.map((uni) => ({
+    params: { slug: uni.id },
+    props: {
+      uni,
+      courses: allCourses.filter((course) => course.data.universities.some((ref) => ref.id === uni.id)),
+    },
+  }));
 }
 
-const { uni } = Astro.props as { uni: University };
+const { uni, courses } = Astro.props as { uni: University; courses: Course[] };
 const { name, locations, summary, description, levels, subjects, website } = uni.data;
 ---
 
@@ -54,6 +61,22 @@ const { name, locations, summary, description, levels, subjects, website } = uni
           <a href={website} target="_blank" rel="noopener" class="text-sm text-brand-dark underline">Official website</a>
         </aside>
       </div>
+
+      {courses.length > 0 && (
+        <div class="mt-14">
+          <h2 class="mb-4 text-2xl font-semibold text-brand-dark">Courses we can help you apply for</h2>
+          <ul class="grid gap-3 sm:grid-cols-2">
+            {courses.map((course) => (
+              <li>
+                <a href={coursePath(course)} class="block rounded-2xl border border-brand-dark/10 bg-white p-4 hover:shadow-lg">
+                  <span class="block font-semibold text-brand-dark">{course.data.title}</span>
+                  <span class="text-sm text-brand-dark/60">{levelLabels[course.data.level]}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div class="mt-14 rounded-2xl bg-brand-dark p-8 text-center text-brand-light">
         <h2 class="mb-2 text-2xl font-semibold">Thinking about {name}?</h2>

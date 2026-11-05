@@ -1,0 +1,18 @@
+{
+  "title": "Advanced Biomedical Science",
+  "level": "postgraduate",
+  "subject": "Life Sciences",
+  "summary": "Deepen your lab and diagnostic expertise for senior roles in healthcare science or research.",
+  "description": [
+    "This master's builds on a biomedical or life science degree, covering advanced diagnostics, molecular techniques and research methods.",
+    "It suits graduates aiming for specialist NHS lab roles, research or a PhD."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:2 or above) in biomedical science or a related subject"
+  ],
+  "modules": ["Molecular diagnostics", "Advanced haematology", "Clinical biochemistry", "Research methods", "Dissertation"],
+  "careers": ["Specialist biomedical scientist", "Research scientist", "Laboratory manager", "PhD researcher"],
+  "universities": []
+}

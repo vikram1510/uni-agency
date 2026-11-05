@@ -1,0 +1,18 @@
+{
+  "title": "Health & Social Care (Top-Up)",
+  "level": "top-up",
+  "subject": "Health & Social Care",
+  "summary": "Complete an honours degree in health and social care in one year, with several start dates.",
+  "description": [
+    "This top-up builds on your Level 5 qualification, covering health policy, leadership and person-centred care.",
+    "It is popular with people already working in care who want to progress into senior roles."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "May", "September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in health and social care or a related subject"
+  ],
+  "modules": ["Health and social care policy", "Leadership in care", "Public health", "Safeguarding", "Dissertation"],
+  "careers": ["Care manager", "Health promotion officer", "Social care practitioner", "Support services manager"],
+  "universities": []
+}

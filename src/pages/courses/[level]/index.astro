@@ -1,0 +1,41 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section from "@components/ui/layout/Section.astro";
+import Container from "@components/ui/layout/Container.astro";
+import Heading from "@components/ui/atoms/Heading.astro";
+import Text from "@components/ui/atoms/Text.astro";
+import CourseCard from "@components/courses/CourseCard.astro";
+import { getCourses, levels, type Course } from "@utils/courses";
+
+export async function getStaticPaths() {
+  const courses = await getCourses();
+  return levels.map((level) => ({
+    params: { level: level.id },
+    props: { level, courses: courses.filter((course) => course.data.level === level.id) },
+  }));
+}
+
+const { level, courses } = Astro.props as { level: (typeof levels)[number]; courses: Course[] };
+---
+
+<Layout
+  title={`${level.label} courses`}
+  description={level.intro}
+  navbarVariant="floating"
+  footerVariant="nova"
+  fullBleedTop
+>
+  <Section tone="page" class="pt-32 pb-20 md:pt-40 md:pb-28">
+    <Container class="max-w-5xl">
+      <a href="/courses/" class="mb-6 inline-block text-sm text-brand-dark/70 hover:text-brand-dark">← All courses</a>
+      <div class="mb-10" data-motion="fade">
+        <Text variant="accent-label" class="mb-3">Courses</Text>
+        <Heading tag="h1" variant="section-title" class="mb-4">{level.label} courses</Heading>
+        <Text variant="lead">{level.intro}</Text>
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {courses.map((course) => <li><CourseCard course={course} /></li>)}
+      </ul>
+    </Container>
+  </Section>
+</Layout>

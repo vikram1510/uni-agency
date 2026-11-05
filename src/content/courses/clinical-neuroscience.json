@@ -1,0 +1,18 @@
+{
+  "title": "Clinical Neuroscience",
+  "level": "postgraduate",
+  "subject": "Life Sciences",
+  "summary": "Study the brain and nervous system in health and disease, with a focus on clinical research.",
+  "description": [
+    "You explore conditions such as dementia, stroke and epilepsy, and the latest research into diagnosis and treatment.",
+    "It suits science and health graduates aiming for research or clinical science careers."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:1 or above) in a life science, psychology or health subject"
+  ],
+  "modules": ["Neuroanatomy", "Neurological disorders", "Neuroimaging", "Research methods", "Dissertation"],
+  "careers": ["Clinical research scientist", "Neuroscience researcher", "Clinical trials coordinator", "PhD researcher"],
+  "universities": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Adult & Mental Health Nursing",
+  "level": "undergraduate",
+  "subject": "Nursing & Health",
+  "summary": "A dual-field nursing degree that qualifies you in both adult and mental health nursing.",
+  "description": [
+    "This course trains you across two fields of nursing, so you can support people's physical and mental health together.",
+    "It usually takes a little longer than a single-field degree, but you graduate able to register in both fields with the NMC."
+  ],
+  "duration": "Around 4 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3)",
+    "GCSE English and Maths at grade 4/C or above",
+    "Enhanced DBS check and occupational health clearance"
+  ],
+  "modules": ["Foundations of nursing practice", "Mental health and wellbeing", "Physical health assessment", "Therapeutic communication", "Complex care"],
+  "careers": ["Adult nurse", "Mental health nurse", "Liaison nurse", "Community nurse"],
+  "universities": []
+}

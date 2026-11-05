@@ -1,0 +1,18 @@
+{
+  "title": "Business Analytics",
+  "level": "postgraduate",
+  "subject": "Business",
+  "summary": "Use data to solve business problems and make better decisions.",
+  "description": [
+    "This master's combines business knowledge with analytics skills, so you can turn data into clear recommendations.",
+    "It suits graduates from business, maths, economics and other numerate subjects."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:1 or above) in a numerate subject"
+  ],
+  "modules": ["Data analytics", "Business statistics", "Data visualisation", "Decision modelling", "Dissertation"],
+  "careers": ["Business analyst", "Data analyst", "Management consultant", "Operations analyst"],
+  "universities": ["durham-university", "university-of-leeds"]
+}

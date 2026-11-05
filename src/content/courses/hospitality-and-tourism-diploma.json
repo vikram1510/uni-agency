@@ -1,0 +1,19 @@
+{
+  "title": "Hospitality & Tourism Diploma (Level 3–5)",
+  "level": "foundation",
+  "subject": "Events & Tourism",
+  "summary": "Learn how the hospitality and tourism industry works, with a route into a top-up degree.",
+  "description": [
+    "Start at Level 3, then progress to Level 4 (HNC) and Level 5 (HND), building skills for hotels, travel and events.",
+    "After Level 5 you can complete a one-year top-up in tourism and hospitality management."
+  ],
+  "duration": "Around 1 year per level",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "Level 3: usually no formal qualifications needed, just a good level of English",
+    "Level 4 and 5: a Level 3 qualification or the previous level"
+  ],
+  "modules": ["Hospitality operations", "Customer service", "Tourism industry", "Events planning", "Marketing"],
+  "careers": ["Hotel supervisor", "Travel consultant", "Events assistant"],
+  "universities": []
+}

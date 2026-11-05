@@ -1,0 +1,19 @@
+{
+  "title": "Building Surveying",
+  "level": "undergraduate",
+  "subject": "Construction",
+  "summary": "Learn to inspect, maintain and improve buildings, a career with strong demand across the UK.",
+  "description": [
+    "Building surveyors assess the condition of buildings, plan repairs and advise on renovation and regulations.",
+    "Courses are often accredited by the Royal Institution of Chartered Surveyors (RICS)."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3)",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Construction technology", "Building pathology", "Property law", "Surveying practice", "Sustainable refurbishment"],
+  "careers": ["Building surveyor", "Project manager", "Facilities manager", "Property consultant"],
+  "universities": ["liverpool-john-moores-university", "leeds-beckett-university"]
+}

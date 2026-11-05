@@ -1,0 +1,18 @@
+{
+  "title": "Banking, Finance & Risk Management",
+  "level": "postgraduate",
+  "subject": "Accounting & Finance",
+  "summary": "Build specialist knowledge of banking, financial markets and how risk is measured and managed.",
+  "description": [
+    "This master's covers how banks and financial markets work, plus the tools used to manage financial risk.",
+    "It prepares you for roles in banking, investment and regulation."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:2 or above), ideally in business, finance, economics or a related subject"
+  ],
+  "modules": ["Financial markets", "Banking regulation", "Risk management", "Corporate finance", "Dissertation"],
+  "careers": ["Risk analyst", "Banking analyst", "Compliance officer", "Financial consultant"],
+  "universities": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Architectural Engineering",
+  "level": "undergraduate",
+  "subject": "Engineering",
+  "summary": "Learn how buildings are designed to be safe, efficient and sustainable, from structure to energy systems.",
+  "description": [
+    "Architectural engineering sits between architecture and engineering. You study structures, building services and sustainable design.",
+    "Graduates work on everything from homes to large commercial projects."
+  ],
+  "duration": "3–4 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels or equivalent Level 3, usually including Maths",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Engineering mathematics", "Structural design", "Building services", "Sustainable buildings", "Design project"],
+  "careers": ["Architectural engineer", "Building services engineer", "Structural engineer", "Sustainability consultant"],
+  "universities": ["university-of-leeds"]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Artificial Intelligence",
+  "level": "postgraduate",
+  "subject": "Computing",
+  "summary": "A master's in AI covering machine learning, deep learning and how to apply them.",
+  "description": [
+    "You study the methods behind modern AI and apply them in hands-on projects.",
+    "Some courses accept graduates from non-computing backgrounds with strong maths skills."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A bachelor's degree (usually 2:1 or above) in computing, maths, engineering or a related subject"
+  ],
+  "modules": ["Machine learning", "Deep learning", "Natural language processing", "Computer vision", "Dissertation"],
+  "careers": ["Machine learning engineer", "AI researcher", "Data scientist", "AI consultant"],
+  "universities": ["royal-holloway-university-of-london", "university-of-leeds"]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Biomedical Science",
+  "level": "undergraduate",
+  "subject": "Life Sciences",
+  "summary": "Study the science behind human health and disease, and how illnesses are diagnosed in the lab.",
+  "description": [
+    "You learn how the body works and what happens in disease, with lots of time in the lab using diagnostic techniques.",
+    "Accredited courses can lead to registration as a biomedical scientist working in NHS labs."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels or equivalent Level 3, including Biology or Chemistry",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Human physiology", "Biochemistry", "Microbiology", "Haematology", "Clinical immunology"],
+  "careers": ["Biomedical scientist", "Clinical laboratory scientist", "Research scientist", "Medical sales"],
+  "universities": ["anglia-ruskin-university", "university-of-bradford", "university-of-greenwich", "liverpool-john-moores-university", "teesside-university"]
+}

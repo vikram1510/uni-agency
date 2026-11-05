@@ -1,0 +1,18 @@
+{
+  "title": "Banking & Finance (Top-Up)",
+  "level": "top-up",
+  "subject": "Accounting & Finance",
+  "summary": "Complete a bachelor's degree in banking and finance in one year after your HND.",
+  "description": [
+    "This one-year course builds on your business or finance Level 5 qualification with specialist banking and finance topics.",
+    "You finish with a full honours degree."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in business, finance or a related subject"
+  ],
+  "modules": ["Financial markets", "Banking practice", "Corporate finance", "Financial regulation", "Dissertation"],
+  "careers": ["Banking officer", "Financial analyst", "Credit analyst", "Finance assistant"],
+  "universities": []
+}

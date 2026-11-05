@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section from "@components/ui/layout/Section.astro";
+import Container from "@components/ui/layout/Container.astro";
+import Heading from "@components/ui/atoms/Heading.astro";
+import Text from "@components/ui/atoms/Text.astro";
+import CourseCard from "@components/courses/CourseCard.astro";
+import { getCourses, levelPath, levels } from "@utils/courses";
+
+const courses = await getCourses();
+const groups = levels.map((level) => ({
+  ...level,
+  courses: courses.filter((course) => course.data.level === level.id),
+}));
+---
+
+<Layout
+  title="Courses"
+  description="Explore undergraduate, postgraduate, top-up and diploma courses at UK universities."
+  navbarVariant="floating"
+  footerVariant="nova"
+  fullBleedTop
+>
+  <Section tone="page" class="pt-32 pb-20 md:pt-40 md:pb-28">
+    <Container class="max-w-5xl">
+      <div class="mb-12 text-center" data-motion="fade">
+        <Text variant="accent-label" class="mb-3">Courses</Text>
+        <Heading tag="h1" variant="section-title" class="mb-4">Find the right course</Heading>
+        <Text variant="lead">Whatever your qualifications, there's a route into university for you.</Text>
+      </div>
+
+      <nav aria-label="Course levels" class="mb-14 flex flex-wrap justify-center gap-2">
+        {groups.map((group) => (
+          <a href={`#${group.id}`} class="rounded-full border border-brand-dark/15 px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-dark hover:text-brand-light">
+            {group.label}
+          </a>
+        ))}
+      </nav>
+
+      <div class="grid gap-16">
+        {groups.map((group) => (
+          <section id={group.id}>
+            <div class="mb-6 flex flex-wrap items-end justify-between gap-2">
+              <div>
+                <h2 class="text-2xl font-semibold text-brand-dark">{group.label}</h2>
+                <p class="mt-1 max-w-2xl text-brand-dark/70">{group.intro}</p>
+              </div>
+              <a href={levelPath(group.id)} class="text-sm font-semibold text-brand-dark underline">See all</a>
+            </div>
+            <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {group.courses.map((course) => <li><CourseCard course={course} /></li>)}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </Container>
+  </Section>
+</Layout>

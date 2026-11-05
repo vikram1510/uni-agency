@@ -1,0 +1,20 @@
+{
+  "title": "Advanced Clinical Practice",
+  "level": "postgraduate",
+  "subject": "Nursing & Health",
+  "summary": "For experienced health professionals moving into advanced, autonomous clinical roles.",
+  "description": [
+    "Designed for registered nurses and allied health professionals, this master's develops advanced assessment, diagnosis and decision-making skills.",
+    "It is usually studied part-time alongside work, with support from your employer."
+  ],
+  "duration": "2–3 years part-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "Registration with a UK professional body (e.g. NMC or HCPC)",
+    "A bachelor's degree and relevant clinical experience",
+    "Support from your employer for clinical practice"
+  ],
+  "modules": ["Advanced clinical assessment", "Clinical reasoning", "Non-medical prescribing", "Leadership", "Research for practice"],
+  "careers": ["Advanced clinical practitioner", "Nurse consultant", "Clinical lead"],
+  "universities": ["canterbury-christ-church-university", "teesside-university", "university-of-huddersfield", "university-of-bradford"]
+}

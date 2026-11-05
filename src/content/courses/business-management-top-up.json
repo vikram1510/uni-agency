@@ -1,0 +1,18 @@
+{
+  "title": "Business Management (Top-Up)",
+  "level": "top-up",
+  "subject": "Business",
+  "summary": "Turn your HND in business into a full BA (Hons) Business Management in one year.",
+  "description": [
+    "The most popular top-up course, it covers strategy, leadership, marketing and finance at degree level.",
+    "Many universities offer flexible timetables to fit around work."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in business or a related subject"
+  ],
+  "modules": ["Strategic management", "Leadership", "Marketing", "Financial decision-making", "Business project"],
+  "careers": ["Business manager", "Project coordinator", "Marketing executive", "HR officer"],
+  "universities": []
+}

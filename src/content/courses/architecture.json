@@ -1,0 +1,20 @@
+{
+  "title": "Architecture",
+  "level": "undergraduate",
+  "subject": "Architecture",
+  "summary": "Study the design of buildings and places, and take the first step towards becoming an architect.",
+  "description": [
+    "You develop design, drawing and model-making skills in studio projects, alongside history, theory and technology.",
+    "This degree is usually the first stage (Part 1) of training to become a registered architect."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3)",
+    "A portfolio of creative work",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Design studio", "History and theory of architecture", "Building technology", "Digital design", "Urban design"],
+  "careers": ["Architectural assistant", "Urban designer", "Architect (after further training)", "Interior designer"],
+  "universities": ["university-of-greenwich", "leeds-beckett-university", "liverpool-john-moores-university", "university-of-huddersfield", "cardiff-university", "university-of-lancashire"]
+}

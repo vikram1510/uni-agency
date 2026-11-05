@@ -1,0 +1,19 @@
+{
+  "title": "Computing & IT Diploma (Level 3–5)",
+  "level": "foundation",
+  "subject": "Computing",
+  "summary": "Build practical computing skills level by level, with a route into a top-up degree.",
+  "description": [
+    "Start at Level 3 if you are new to computing, then progress to Level 4 (HNC) and Level 5 (HND).",
+    "After Level 5 you can complete a one-year top-up to earn a full bachelor's degree."
+  ],
+  "duration": "Around 1 year per level",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "Level 3: usually no formal qualifications needed, just a good level of English",
+    "Level 4 and 5: a Level 3 qualification or the previous level"
+  ],
+  "modules": ["Programming", "Networking", "Databases", "Web development", "Cyber security"],
+  "careers": ["IT support technician", "Junior developer", "Network technician"],
+  "universities": []
+}

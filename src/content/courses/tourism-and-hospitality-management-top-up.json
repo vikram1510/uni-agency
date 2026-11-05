@@ -1,0 +1,18 @@
+{
+  "title": "Tourism & Hospitality Management (Top-Up)",
+  "level": "top-up",
+  "subject": "Events & Tourism",
+  "summary": "Complete a degree in tourism and hospitality management in one year after your HND.",
+  "description": [
+    "This top-up covers how hotels, travel and tourism businesses are run, with a focus on management and customer experience.",
+    "You graduate ready for supervisory and management roles."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in tourism, hospitality or business"
+  ],
+  "modules": ["Tourism management", "Hospitality operations", "Marketing for tourism", "Sustainable tourism", "Dissertation"],
+  "careers": ["Hotel manager", "Tourism officer", "Events manager", "Travel operations manager"],
+  "universities": []
+}

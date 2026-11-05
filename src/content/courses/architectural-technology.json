@@ -1,0 +1,19 @@
+{
+  "title": "Architectural Technology",
+  "level": "undergraduate",
+  "subject": "Architecture",
+  "summary": "Turn building designs into buildable, technically sound projects using digital tools like BIM.",
+  "description": [
+    "Architectural technologists focus on how buildings go together: materials, construction details and building regulations.",
+    "You work with industry software and get hands-on project experience."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3)",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Construction technology", "Building information modelling (BIM)", "Design studio", "Building regulations", "Professional practice"],
+  "careers": ["Architectural technologist", "BIM coordinator", "Building designer", "Project manager"],
+  "universities": ["leeds-beckett-university", "edinburgh-napier-university", "university-of-huddersfield"]
+}

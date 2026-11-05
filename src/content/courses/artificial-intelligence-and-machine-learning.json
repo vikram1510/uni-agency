@@ -1,0 +1,19 @@
+{
+  "title": "Artificial Intelligence & Machine Learning",
+  "level": "undergraduate",
+  "subject": "Computing",
+  "summary": "Learn to build intelligent systems, from programming foundations to machine learning models.",
+  "description": [
+    "This degree combines core computer science with specialist AI topics like machine learning, data and neural networks.",
+    "You build real projects and learn how AI is used responsibly in business and society."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3), ideally including Maths or Computing",
+    "GCSE English and Maths at grade 4/C or above"
+  ],
+  "modules": ["Programming", "Mathematics for AI", "Machine learning", "Data science", "AI ethics"],
+  "careers": ["Machine learning engineer", "Data scientist", "Software developer", "AI analyst"],
+  "universities": []
+}

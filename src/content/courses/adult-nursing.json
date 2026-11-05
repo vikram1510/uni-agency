@@ -1,0 +1,20 @@
+{
+  "title": "Adult Nursing",
+  "level": "undergraduate",
+  "subject": "Nursing & Health",
+  "summary": "Train to become a registered adult nurse, combining university study with hospital and community placements.",
+  "description": [
+    "This degree prepares you to care for adults with a wide range of health needs, from acute hospital care to supporting people at home.",
+    "Around half of your time is spent on clinical placements. When you graduate you can apply to join the Nursing and Midwifery Council (NMC) register."
+  ],
+  "duration": "3 years full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "A-levels, BTEC or an Access to Higher Education Diploma (Level 3), usually including a science or health subject",
+    "GCSE English and Maths at grade 4/C or above",
+    "Enhanced DBS check and occupational health clearance"
+  ],
+  "modules": ["Foundations of nursing practice", "Anatomy and physiology", "Clinical skills and assessment", "Long-term conditions", "Leadership in nursing"],
+  "careers": ["Staff nurse", "Community nurse", "Practice nurse", "Specialist nurse"],
+  "universities": ["anglia-ruskin-university", "canterbury-christ-church-university", "university-of-greenwich", "university-of-bolton", "teesside-university", "university-of-bradford", "liverpool-john-moores-university", "university-of-huddersfield"]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Business Management Diploma (Level 3–5)",
+  "level": "foundation",
+  "subject": "Business",
+  "summary": "A step-by-step business qualification that can lead to work or a top-up degree.",
+  "description": [
+    "Start at Level 3 if you have no formal qualifications, then progress to Level 4 (HNC, equal to the first year of a degree) and Level 5 (HND, equal to the second year).",
+    "After Level 5 you can join a one-year top-up to complete a full bachelor's degree."
+  ],
+  "duration": "Around 1 year per level",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "Level 3: usually no formal qualifications needed, just a good level of English",
+    "Level 4 and 5: a Level 3 qualification or the previous level"
+  ],
+  "modules": ["Business environment", "Marketing", "Human resources", "Finance", "Management"],
+  "careers": ["Business administrator", "Team leader", "Junior manager"],
+  "universities": []
+}

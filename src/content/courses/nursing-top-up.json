@@ -1,0 +1,19 @@
+{
+  "title": "Nursing (Top-Up)",
+  "level": "top-up",
+  "subject": "Nursing & Health",
+  "summary": "For registered nurses with a diploma who want to complete a full BSc (Hons) degree.",
+  "description": [
+    "This top-up lets qualified nurses build on their existing training to gain a degree, often studied part-time alongside work.",
+    "It supports career progression into senior and specialist roles."
+  ],
+  "duration": "1 year full-time or up to 2 years part-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "Current registration with the Nursing and Midwifery Council (NMC)",
+    "A diploma in nursing or equivalent Level 5 qualification"
+  ],
+  "modules": ["Evidence-based practice", "Leadership in nursing", "Advanced clinical skills", "Health policy", "Dissertation"],
+  "careers": ["Senior staff nurse", "Ward manager", "Specialist nurse", "Nurse educator"],
+  "universities": []
+}

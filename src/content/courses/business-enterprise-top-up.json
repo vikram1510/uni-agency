@@ -1,0 +1,18 @@
+{
+  "title": "Business Enterprise, Creation & Management (Top-Up)",
+  "level": "top-up",
+  "subject": "Business",
+  "summary": "Finish your degree while learning how to start, run and grow a business.",
+  "description": [
+    "Ideal if you want to launch your own business or work in a start-up, this top-up covers entrepreneurship, innovation and management.",
+    "It turns your Level 5 qualification into an honours degree in one year."
+  ],
+  "duration": "1 year full-time",
+  "intakes": ["January", "September"],
+  "entryRequirements": [
+    "An HND, Foundation Degree or Level 5 Diploma in business or a related subject"
+  ],
+  "modules": ["Entrepreneurship", "Innovation", "Business planning", "Leadership", "Business project"],
+  "careers": ["Entrepreneur", "Business development manager", "Small business owner", "Operations manager"],
+  "universities": []
+}
