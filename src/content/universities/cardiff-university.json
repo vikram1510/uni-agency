@@ -1,0 +1,13 @@
+{
+  "name": "Cardiff University",
+  "locations": ["Cardiff"],
+  "summary": "A leading research university in the heart of the Welsh capital.",
+  "description": [
+    "Cardiff University is a member of the Russell Group of research-intensive universities, with a city-centre campus close to everything Cardiff has to offer.",
+    "It is well regarded for medicine, engineering, journalism, law and business."
+  ],
+  "levels": ["undergraduate", "postgraduate"],
+  "subjects": ["Medicine & Health", "Engineering", "Journalism & Media", "Law", "Business", "Psychology"],
+  "website": "https://www.cardiff.ac.uk",
+  "featured": false
+}

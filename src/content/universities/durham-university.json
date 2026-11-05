@@ -1,0 +1,13 @@
+{
+  "name": "Durham University",
+  "locations": ["Durham"],
+  "summary": "A historic collegiate university in the North East, consistently ranked among the UK's best.",
+  "description": [
+    "Durham University is a Russell Group university where every student belongs to a college, giving a strong sense of community.",
+    "It is known for law, business, sciences, history and engineering."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Law", "Business", "Natural Sciences", "History", "Engineering", "Philosophy"],
+  "website": "https://www.durham.ac.uk",
+  "featured": false
+}

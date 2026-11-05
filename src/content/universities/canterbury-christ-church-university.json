@@ -1,0 +1,13 @@
+{
+  "name": "Canterbury Christ Church University",
+  "locations": ["Canterbury", "Medway", "Tunbridge Wells"],
+  "summary": "A Kent university with a strong reputation for nursing, teaching and public service careers.",
+  "description": [
+    "Canterbury Christ Church University trains many of the South East's nurses, teachers, paramedics and police officers.",
+    "Courses are practical and closely linked to local health services, schools and employers."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Nursing & Health", "Teaching & Education", "Policing", "Business", "Psychology", "Sport"],
+  "website": "https://www.canterbury.ac.uk",
+  "featured": true
+}

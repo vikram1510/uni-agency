@@ -1,0 +1,13 @@
+{
+  "name": "University of Bolton",
+  "locations": ["Bolton"],
+  "summary": "A small, supportive university in Greater Manchester with small class sizes.",
+  "description": [
+    "The University of Bolton offers a personal experience with small classes and staff who know students by name.",
+    "It is popular with local and mature students, with options in nursing, engineering, business, teaching and games."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Nursing & Health", "Engineering", "Business", "Teaching & Education", "Games Design", "Psychology"],
+  "website": "https://www.bolton.ac.uk",
+  "featured": true
+}

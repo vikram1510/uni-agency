@@ -16,6 +16,21 @@ const blogCollection = defineCollection({
   }),
 });
 
+const universitiesCollection = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/universities" }),
+  schema: z.object({
+    name: z.string(),
+    locations: z.array(z.string()).min(1),
+    summary: z.string(),
+    description: z.array(z.string()).min(1),
+    levels: z.array(z.enum(["foundation", "undergraduate", "top-up", "postgraduate"])).min(1),
+    subjects: z.array(z.string()).min(1),
+    website: z.string().url(),
+    featured: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
+  universities: universitiesCollection,
 };

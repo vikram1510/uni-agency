@@ -1,0 +1,13 @@
+{
+  "name": "Ravensbourne University London",
+  "locations": ["London"],
+  "summary": "A specialist digital media and design university on the Greenwich Peninsula.",
+  "description": [
+    "Ravensbourne University London focuses on creative and digital careers, with industry-standard studios and kit.",
+    "It is a strong choice for animation, film, fashion, games, music production and design."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Animation", "Film & TV", "Fashion", "Games Design", "Music Production", "Graphic Design"],
+  "website": "https://www.ravensbourne.ac.uk",
+  "featured": false
+}

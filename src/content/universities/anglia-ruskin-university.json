@@ -1,0 +1,13 @@
+{
+  "name": "Anglia Ruskin University",
+  "locations": ["Cambridge", "Chelmsford", "Peterborough", "London"],
+  "summary": "A modern, career-focused university with campuses across the East of England and London.",
+  "description": [
+    "Anglia Ruskin University (ARU) focuses on practical, career-led degrees. Teaching is hands-on, with strong links to employers in health, business and the creative industries.",
+    "Its London campus is popular with mature students returning to study, with flexible business, health and foundation year options."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Business", "Nursing & Health", "Psychology", "Computing", "Law", "Art & Design"],
+  "website": "https://www.aru.ac.uk",
+  "featured": true
+}

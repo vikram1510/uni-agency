@@ -1,0 +1,13 @@
+{
+  "name": "Birkbeck, University of London",
+  "locations": ["London"],
+  "summary": "Central London university known for evening teaching, ideal if you work or have family commitments.",
+  "description": [
+    "Birkbeck teaches most of its courses in the evening, so students can study for a degree while working or caring for family.",
+    "It has a long history of welcoming mature students and people without traditional qualifications."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Business", "Law", "Psychology", "Computer Science", "Arts & Humanities", "Social Sciences"],
+  "website": "https://www.bbk.ac.uk",
+  "featured": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "University of Leeds",
+  "locations": ["Leeds"],
+  "summary": "One of the UK's largest universities, with a big campus close to Leeds city centre.",
+  "description": [
+    "The University of Leeds is a Russell Group university with a huge range of courses and one of the UK's biggest student unions.",
+    "It is known for business, law, medicine, engineering and the arts, and offers foundation years for students without traditional qualifications."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Business", "Law", "Medicine & Health", "Engineering", "Arts & Humanities", "Computing"],
+  "website": "https://www.leeds.ac.uk",
+  "featured": false
+}

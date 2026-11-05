@@ -1,0 +1,13 @@
+{
+  "name": "Bangor University",
+  "locations": ["Bangor"],
+  "summary": "A friendly university in North Wales, between the mountains of Eryri and the sea.",
+  "description": [
+    "Bangor University offers a close-knit campus experience in one of the most scenic parts of the UK, with a lower cost of living than most big cities.",
+    "It is well known for ocean and environmental sciences, psychology and sport science."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Ocean Sciences", "Psychology", "Environmental Science", "Law", "Business", "Nursing & Health"],
+  "website": "https://www.bangor.ac.uk",
+  "featured": false
+}

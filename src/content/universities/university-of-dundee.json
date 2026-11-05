@@ -1,0 +1,13 @@
+{
+  "name": "University of Dundee",
+  "locations": ["Dundee"],
+  "summary": "A Scottish university known for medicine, life sciences and art and design.",
+  "description": [
+    "The University of Dundee has a compact campus in a waterfront city with a growing creative and tech scene.",
+    "It is well regarded for medicine, dentistry, life sciences, law and its Duncan of Jordanstone College of Art and Design."
+  ],
+  "levels": ["undergraduate", "postgraduate"],
+  "subjects": ["Medicine & Health", "Life Sciences", "Art & Design", "Law", "Nursing & Health", "Computing"],
+  "website": "https://www.dundee.ac.uk",
+  "featured": false
+}

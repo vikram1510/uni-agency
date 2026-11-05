@@ -1,0 +1,13 @@
+{
+  "name": "University of Lancashire",
+  "locations": ["Preston", "Burnley"],
+  "summary": "A large university in the North West, formerly the University of Central Lancashire (UCLan).",
+  "description": [
+    "The University of Lancashire, previously known as UCLan, has its main campus in Preston and a growing campus in Burnley.",
+    "It offers a wide range of courses, with strengths in medicine, nursing, pharmacy, journalism and forensic science."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Medicine & Health", "Nursing & Health", "Pharmacy", "Journalism & Media", "Forensic Science", "Business"],
+  "website": "https://www.uclan.ac.uk",
+  "featured": false
+}

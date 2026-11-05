@@ -1,0 +1,13 @@
+{
+  "name": "Royal Holloway, University of London",
+  "locations": ["Egham"],
+  "summary": "A research-led university with a stunning campus in Surrey, just outside London.",
+  "description": [
+    "Royal Holloway is part of the University of London and is set on a green campus with a famous Victorian Founder's Building.",
+    "It is known for drama, psychology, computer science and cyber security, history and geography."
+  ],
+  "levels": ["undergraduate", "postgraduate"],
+  "subjects": ["Drama & Theatre", "Psychology", "Computer Science", "History", "Geography", "Business"],
+  "website": "https://www.royalholloway.ac.uk",
+  "featured": false
+}

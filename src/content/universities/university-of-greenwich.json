@@ -1,0 +1,13 @@
+{
+  "name": "University of Greenwich",
+  "locations": ["London", "Medway"],
+  "summary": "A London university with a world-famous riverside campus and a wide range of courses.",
+  "description": [
+    "The University of Greenwich teaches at the Old Royal Naval College by the Thames, as well as Avery Hill in South East London and Medway in Kent.",
+    "It offers a broad mix of courses, including business, computing, nursing, architecture and education."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Business", "Computing", "Nursing & Health", "Architecture", "Teaching & Education", "Engineering"],
+  "website": "https://www.gre.ac.uk",
+  "featured": true
+}

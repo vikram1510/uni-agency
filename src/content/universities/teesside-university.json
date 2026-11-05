@@ -1,0 +1,13 @@
+{
+  "name": "Teesside University",
+  "locations": ["Middlesbrough", "London"],
+  "summary": "A modern university in the North East with a reputation for games, animation and health.",
+  "description": [
+    "Teesside University offers a compact town-centre campus in Middlesbrough and a strong focus on employability.",
+    "It is well known for animation and games, nursing and health, forensic science and computing."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Animation & Games", "Nursing & Health", "Forensic Science", "Computing", "Engineering", "Business"],
+  "website": "https://www.tees.ac.uk",
+  "featured": true
+}

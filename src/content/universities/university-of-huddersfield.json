@@ -1,0 +1,13 @@
+{
+  "name": "University of Huddersfield",
+  "locations": ["Huddersfield"],
+  "summary": "A West Yorkshire university known for excellent teaching and strong placements.",
+  "description": [
+    "The University of Huddersfield is recognised for teaching quality, with many staff holding professional teaching qualifications.",
+    "It is a good choice for teaching, music, engineering, business, nursing and fashion."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Teaching & Education", "Music", "Engineering", "Business", "Nursing & Health", "Fashion"],
+  "website": "https://www.hud.ac.uk",
+  "featured": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "University of Bradford",
+  "locations": ["Bradford"],
+  "summary": "A diverse, career-focused university in West Yorkshire with strong health courses.",
+  "description": [
+    "The University of Bradford has a single city campus and a strong record of graduate employability.",
+    "It is known for pharmacy, optometry, nursing and health, engineering and its School of Management."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Pharmacy", "Optometry", "Nursing & Health", "Engineering", "Business", "Computing"],
+  "website": "https://www.bradford.ac.uk",
+  "featured": false
+}

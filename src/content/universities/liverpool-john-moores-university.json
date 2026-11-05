@@ -1,0 +1,13 @@
+{
+  "name": "Liverpool John Moores University",
+  "locations": ["Liverpool"],
+  "summary": "A big city university with real-world courses and a lively student scene.",
+  "description": [
+    "Liverpool John Moores University (LJMU) combines practical teaching with strong research in areas like sport science and astrophysics.",
+    "Students benefit from Liverpool's affordable living costs and vibrant culture."
+  ],
+  "levels": ["foundation", "undergraduate", "postgraduate"],
+  "subjects": ["Sport Science", "Nursing & Health", "Pharmacy", "Engineering", "Business", "Criminology"],
+  "website": "https://www.ljmu.ac.uk",
+  "featured": true
+}

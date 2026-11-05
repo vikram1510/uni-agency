@@ -1,0 +1,13 @@
+{
+  "name": "BPP University",
+  "locations": ["London", "Birmingham", "Manchester", "Leeds"],
+  "summary": "A professional-focused university specialising in law, business and health.",
+  "description": [
+    "BPP University is built around professional careers. Courses are designed with employers and taught by people with real industry experience.",
+    "It is a popular choice for law, accountancy, business and health students who want a direct route into their profession."
+  ],
+  "levels": ["undergraduate", "postgraduate"],
+  "subjects": ["Law", "Business", "Accounting & Finance", "Nursing & Health", "Psychology"],
+  "website": "https://www.bpp.com",
+  "featured": false
+}

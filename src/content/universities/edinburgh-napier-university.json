@@ -1,0 +1,13 @@
+{
+  "name": "Edinburgh Napier University",
+  "locations": ["Edinburgh"],
+  "summary": "A modern, career-focused university in Scotland's capital.",
+  "description": [
+    "Edinburgh Napier University focuses on professional, practical degrees with placements and industry links.",
+    "It is popular for nursing, computing, business, film and sport, and offers direct entry into later years for students with college qualifications."
+  ],
+  "levels": ["undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Nursing & Health", "Computing", "Business", "Film & Media", "Engineering", "Sport"],
+  "website": "https://www.napier.ac.uk",
+  "featured": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Leeds Beckett University",
+  "locations": ["Leeds"],
+  "summary": "A large, welcoming university in Leeds with a strong focus on sport and careers.",
+  "description": [
+    "Leeds Beckett University has a city-centre campus and a parkland campus at Headingley, home to excellent sports facilities.",
+    "It is known for sport, business, law, computing and architecture, with many courses offering placements."
+  ],
+  "levels": ["foundation", "undergraduate", "top-up", "postgraduate"],
+  "subjects": ["Sport", "Business", "Law", "Computing", "Architecture", "Events & Tourism"],
+  "website": "https://www.leedsbeckett.ac.uk",
+  "featured": false
+}
