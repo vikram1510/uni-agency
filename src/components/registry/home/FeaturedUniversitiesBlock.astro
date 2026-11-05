@@ -1,0 +1,39 @@
+---
+import Section from "@components/ui/layout/Section.astro";
+import Container from "@components/ui/layout/Container.astro";
+import Heading from "@components/ui/atoms/Heading.astro";
+import Text from "@components/ui/atoms/Text.astro";
+import { getUniversities, universityPath } from "@utils/universities";
+
+interface Props { title?: string; description?: string; linkLabel?: string; linkHref?: string; class?: string }
+
+const { title, description, linkLabel, linkHref, class: className } = Astro.props as Props;
+const featured = (await getUniversities()).filter((uni) => uni.data.featured);
+---
+
+<Section id="universities" tone="page" class:list={["py-16 md:py-24", className]}>
+  <Container class="w-full max-w-none px-[clamp(1.5rem,5vw,5rem)]">
+    <div class="mb-10 grid gap-4 md:mb-14 md:grid-cols-2 md:items-end">
+      <Heading tag="h2" variant="section-title">{title}</Heading>
+      <div class="grid gap-4">
+        <Text variant="lead">{description}</Text>
+        {linkLabel && linkHref && (
+          <a href={linkHref} class="inline-flex items-center gap-2 font-semibold text-brand-dark hover:text-brand-accent">
+            {linkLabel} <span aria-hidden="true">→</span>
+          </a>
+        )}
+      </div>
+    </div>
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((uni) => (
+        <li>
+          <a href={universityPath(uni.id)} class="flex h-full flex-col gap-2 rounded-[var(--rounded-lg)] border border-brand-dark/10 bg-white p-6 transition-shadow hover:shadow-lg">
+            <span class="text-xs font-semibold uppercase tracking-wide text-brand-dark/60">{uni.data.locations.join(" · ")}</span>
+            <span class="text-lg font-semibold text-brand-dark">{uni.data.name}</span>
+            <span class="text-sm text-brand-dark/75">{uni.data.summary}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Container>
+</Section>

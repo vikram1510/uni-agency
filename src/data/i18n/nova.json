@@ -1,9 +1,9 @@
 {
   "en": {
     "page": {
-      "title": "Nova, websites for ambitious brands",
-      "description": "We create modern websites that strengthen your image, attract clients and support business growth.",
-      "heading": "New possibilities for ambitious brands"
+      "title": "UniPath | Find the right university and course",
+      "description": "Free, personal university and course advice for UK students. We help school leavers and mature students choose a course, apply and sort out student finance.",
+      "heading": "Find the right university and course"
     },
     "demoBanner": {
       "label": "This template was designed and built by WebScale.",
@@ -14,16 +14,15 @@
     },
     "navigation": {
       "menu": [
-        { "label": "About us", "href": "#team" },
-        { "label": "Services", "href": "#services" },
-        { "label": "Selected work", "href": "#work" },
-        { "label": "Reviews", "href": "#reviews" },
-        { "label": "AI", "href": "/ai/" }
+        { "label": "About", "href": "#about" },
+        { "label": "Courses", "href": "/courses/" },
+        { "label": "Universities", "href": "/universities/" },
+        { "label": "Contact", "href": "#contact" }
       ],
       "cta": {
-        "label": "Start a project",
-        "hoverLabel": "Let's talk",
-        "href": "#contact"
+        "label": "Find your course",
+        "hoverLabel": "Let's start",
+        "href": "/ai/"
       },
       "aria": {
         "menuOpen": "Open navigation menu",
@@ -49,103 +48,94 @@
     },
     "sections": {
       "nova-hero-wireframe": {
-        "eyebrow": "STRATEGY / DESIGN / TECHNOLOGY",
-        "heading": "New possibilities for",
-        "headingAccent": "ambitious brands",
-        "description": "We create modern websites that strengthen your image, attract clients and turn your business goals into real growth.",
-        "primaryCTA": { "label": "Start a project", "href": "#contact" },
-        "secondaryCTA": { "label": "Meet the team", "href": "#team" },
-        "trustedBy": "Trusted by",
-        "trustItems": ["MODO", "LUMI", "KOVO", "NOMA", "ASPEKT"],
+        "eyebrow": "UNIVERSITY ADVICE FOR UK STUDENTS",
+        "heading": "Find the right",
+        "headingAccent": "university and course",
+        "description": "Free, personal guidance for school leavers and mature students. We help you choose a course, apply and sort out student finance.",
+        "primaryCTA": { "label": "Find your course", "href": "/ai/" },
+        "secondaryCTA": { "label": "Browse universities", "href": "/universities/" },
+        "trustedBy": "Universities we work with",
+        "trustItems": ["ARU", "GREENWICH", "TEESSIDE", "LJMU", "BOLTON"],
         "image": "/assets/images/t001-nova/t001-nova-hero.webp",
-        "imageAlt": "Strategist working at a laptop",
+        "imageAlt": "Student working at a laptop",
         "stats": [
-          { "value": "2000+", "label": "Projects delivered" },
-          { "value": "10+", "label": "Years of experience" },
-          { "value": "800+", "label": "Product hours" },
-          { "value": "150M+", "label": "Client revenue generated" }
+          { "value": "20+", "label": "Partner universities" },
+          { "value": "30+", "label": "Courses to choose from" },
+          { "value": "4", "label": "Study levels" },
+          { "value": "£0", "label": "Cost of our advice" }
         ]
       },
-      "nova-projects": {
-        "title": "Turning ideas into real outcomes",
-        "description": "We combine strategic thinking, refined design and modern technology to create websites that look great and deliver measurable value.",
-        "linkLabel": "See selected work",
-        "linkHref": "#work",
-        "items": [
-          { "category": "Websites", "title": "A premium brand with a new website", "image": "/assets/images/t001-nova/t001-nova-project-laptop.webp", "alt": "Laptop showing a website project" },
-          { "category": "Brand identity", "title": "A new identity for an ambitious brand", "image": "/assets/images/t001-nova/t001-nova-project-building.webp", "alt": "Modern building used as a project example" }
+      "how-it-works": {
+        "title": "How it works",
+        "description": "From your first question to your first day at university, we're with you at every step.",
+        "steps": [
+          { "title": "Find your course", "description": "Tell us what you'd like to study and what qualifications you have. We'll show you courses that fit." },
+          { "title": "Free consultation", "description": "Book a call with an advisor to talk through your options, entry requirements and next steps." },
+          { "title": "Apply with support", "description": "We help with your application and personal statement, whether it's through UCAS or direct to the university." },
+          { "title": "Sort your finance", "description": "We guide you through applying to Student Finance England for tuition fee and maintenance loans." }
         ]
       },
       "nova-services": {
-        "title": "Our services",
-        "description": "End-to-end support, from the first concept to launch and continued growth.",
-        "linkLabel": "Explore our services",
-        "linkHref": "#services",
+        "title": "How we help",
+        "description": "Practical, honest support so you can make the right choice and get your place.",
+        "linkLabel": "Explore courses",
+        "linkHref": "/courses/",
         "items": [
-          { "number": "01.", "icon": "palette", "title": "UX/UI design", "description": "Modern and functional design tailored to your brand. We create experiences that feel intuitive and support business goals." },
-          { "number": "02.", "icon": "browser", "title": "Websites", "description": "Fast, responsive and conversion-focused websites for modern businesses. Every screen has a clear purpose." },
-          { "number": "03.", "icon": "paint-brush", "title": "Brand identity", "description": "A consistent visual identity that helps your brand stand out and build trust through strategy, type and detail." },
-          { "number": "04.", "icon": "lifebuoy", "title": "Support and growth", "description": "Ongoing support after launch. We help keep your website current, reliable and ready for the next stage." }
+          { "number": "01.", "icon": "compass", "title": "Course matching", "description": "We match your interests, qualifications and location to courses and universities that suit you." },
+          { "number": "02.", "icon": "file-text", "title": "Application support", "description": "Help with UCAS and direct applications, personal statements and getting your documents ready." },
+          { "number": "03.", "icon": "coins", "title": "Student finance", "description": "Step-by-step help applying for tuition fee and maintenance loans, so money doesn't hold you back." },
+          { "number": "04.", "icon": "handshake", "title": "Support until you start", "description": "We stay in touch through offers, interviews and enrolment, right up to your first day." }
         ]
       },
+      "featured-universities": {
+        "title": "Featured universities",
+        "description": "A few of the UK universities we help students apply to.",
+        "linkLabel": "See all universities",
+        "linkHref": "/universities/"
+      },
       "nova-team": {
-        "title": "People who create value",
-        "description": "We are a team of specialists who combine a passion for technology with a sharp eye for good design. Every project is shaped around the brand, its goals and its audience.",
+        "title": "Advisors on your side",
+        "description": "We help UK students, whether you're leaving school or returning to study as an adult, find a course that fits your goals and your life.",
         "image": "/assets/images/t001-nova/t001-nova-about-team.webp",
-        "imageAlt": "Nova team working on a project",
-        "checks": ["Strategic thinking", "Tailored approach", "Real support"],
-        "teamCount": "10+",
-        "teamLabel": "specialists on the team",
-        "teamAriaLabel": "Our team",
-        "teamAvatars": [
-          { "src": "/assets/images/t001-nova/t001-nova-avatar-01@220.webp", "alt": "Nova team member" },
-          { "src": "/assets/images/t001-nova/t001-nova-avatar-02@220.webp", "alt": "Nova team member" },
-          { "src": "/assets/images/t001-nova/t001-nova-avatar-03@220.webp", "alt": "Nova team member" }
-        ],
-        "buttonLabel": "Meet the team",
-        "buttonHref": "#team"
+        "imageAlt": "Advisors talking with a student",
+        "checks": ["Free, impartial advice", "Support for mature students", "Help from first question to first day"],
+        "teamCount": "20+",
+        "teamLabel": "partner universities",
+        "teamAriaLabel": "Our advisors",
+        "teamAvatars": [],
+        "buttonLabel": "Book a free consultation",
+        "buttonHref": "#contact"
       },
       "faq3": {
         "title": "Frequently asked questions",
-        "description": "The key information about our process, collaboration and outcomes before you start a project.",
+        "description": "Quick answers to the questions students ask us most.",
         "tagline": "FAQ",
         "items": [
-          { "q": "How long does it take to prepare a new website?", "a": "A standard project usually takes 2 to 4 weeks. The timeline depends on the scope, number of pages and how quickly the materials are provided." },
-          { "q": "Can you help prepare the copy and images?", "a": "Yes. We can organise existing materials, prepare the content structure and recommend a direction for imagery and graphics that fits the brand." },
-          { "q": "Will the website work well on mobile?", "a": "Yes. We design for phones, tablets and desktops from the start. Every key view is checked across several screen sizes." },
-          { "q": "Can I edit the website after launch?", "a": "Yes. We structure the project so the most important content can be updated easily. We also provide a short handover guide after launch." }
-        ]
-      },
-      "testimonial-v2": {
-        "title": "Reviews that say more",
-        "description": "See how working with us translated into a stronger image and better results for our clients.",
-        "tagline": "Client reviews",
-        "avatarAltPrefix": "Photo of",
-        "items": [
-          { "quote": "The new website finally gave our communication a clear structure and started bringing better enquiries from the first week.", "author": "Anna Kowalska", "initials": "AK", "role": "Founder of a premium brand", "avatar": "https://i.pravatar.cc/150?u=anna-kowalska" },
-          { "quote": "The process was focused, efficient and very well guided. We received a website that genuinely fits our brand.", "author": "Michal Nowak", "initials": "MN", "role": "Operations director", "avatar": "https://i.pravatar.cc/150?u=michal-nowak" },
-          { "quote": "We can finally present our work in a way that reflects its quality. Clients noticed the difference straight away.", "author": "Karolina Wojcik", "initials": "KW", "role": "Studio owner", "avatar": "https://i.pravatar.cc/150?u=karolina-wojcik" }
+          { "q": "Is your advice really free?", "a": "Yes. There is no charge for our advice or application support." },
+          { "q": "I don't have A-levels. Can I still go to university?", "a": "Often, yes. Options include Access to Higher Education courses, foundation years and Level 3–5 diplomas. We'll help you find the right route." },
+          { "q": "Can mature students apply?", "a": "Absolutely. Many of the students we help are returning to study as adults, and universities welcome applicants with work and life experience." },
+          { "q": "How do I pay for university?", "a": "Most UK students can get a tuition fee loan and a maintenance loan from Student Finance England. You only start repaying once you earn over the threshold. We'll help you apply." },
+          { "q": "What is a top-up degree?", "a": "If you already have an HND or Foundation Degree, a top-up lets you complete a full bachelor's degree in around one year." }
         ]
       }
     },
     "footer": {
-      "eyebrow": "Your brand deserves more",
-      "heading": "Let's create together",
-      "description": "Tell us about your project and let's see how we can help your brand grow.",
-      "primaryLabel": "Get in touch",
+      "eyebrow": "Your future starts here",
+      "heading": "Let's find your course",
+      "description": "Book a free consultation and we'll help you find the right university and course for you.",
+      "primaryLabel": "Book a free consultation",
       "primaryHref": "#contact",
-      "secondaryLabel": "Explore services",
-      "secondaryHref": "#services",
+      "secondaryLabel": "Browse courses",
+      "secondaryHref": "/courses/",
       "legalLinks": [
         { "label": "Privacy policy", "href": "/privacy-policy/" },
         { "label": "Cookies", "href": "/cookies/" }
       ],
       "footerLinks": [
-        { "label": "About us", "href": "#team" },
-        { "label": "Services", "href": "#services" },
-        { "label": "Selected work", "href": "#work" },
-        { "label": "Reviews", "href": "#reviews" },
-        { "label": "AI", "href": "/ai/" }
+        { "label": "About", "href": "#about" },
+        { "label": "Courses", "href": "/courses/" },
+        { "label": "Universities", "href": "/universities/" },
+        { "label": "Find your course", "href": "/ai/" }
       ],
       "ariaLegal": "Legal documents",
       "ariaNavigation": "Footer navigation",

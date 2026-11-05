@@ -3,6 +3,11 @@ import type { SectionEntry } from './types';
 const icon = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>';
 
 export const processSections: Record<string, SectionEntry> = {
+  howItWorks: {
+    id: 'howItWorks', label: 'How it works', groupId: 'process', hint: 'Numbered steps for the agency homepage', icon,
+    defaultVariant: 'default',
+    variants: { default: { component: 'HowItWorksBlock', dataKey: 'how-it-works' } },
+  },
   processTimeline: {
     id: 'processTimeline', label: 'Proces z osią czasu', groupId: 'process', hint: 'Oś czasu kroków z paskiem postępu', icon,
     defaultVariant: 'default',

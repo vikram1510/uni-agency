@@ -30,37 +30,14 @@ const affiliateWebsiteSchema = {
 
 const schema = {
 	'@context': 'https://schema.org',
-	'@type': 'LocalBusiness',
+	'@type': 'Organization',
 	name: company.fullName || company.name,
 	description: company.description || seo.defaultDescription,
 	image: `${siteBase}/og-image.png`,
 	'@id': siteBase,
 	url: siteBase,
-	telephone: company.phone,
-	email: company.email,
-	priceRange: company.priceRange || '$$',
-	address: {
-		'@type': 'PostalAddress',
-		streetAddress: company.address,
-		addressLocality: company.city,
-		postalCode: company.zipCode,
-		addressCountry: 'PL',
-	},
-	geo: {
-		'@type': 'GeoCoordinates',
-		latitude: company.geo?.lat || 52.4064,
-		longitude: company.geo?.lng || 16.9252,
-	},
-	openingHoursSpecification: [
-		{
-			'@type': 'OpeningHoursSpecification',
-			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-			// Optional chaining: hours may be empty/missing in company.json,
-			// then schema falls back to default hours instead of throwing TypeError.
-			opens: company.hours?.split(' - ')?.[0]?.split(': ')?.pop() ?? '08:00',
-			closes: company.hours?.split(' - ')?.[1] ?? '16:00',
-		},
-	],
+	...(company.phone && { telephone: company.phone }),
+	...(company.email && { email: company.email }),
 	sameAs: getSocialUrls(company),
 };
 

@@ -71,6 +71,8 @@ export const COMPONENT_MANIFEST: Record<string, ComponentManifestEntry> = {
   ServicesCardsBlock: { category: 'core', status: 'provisional' },
   ServicesGridBlock: { category: 'core', status: 'provisional' },
   ServicesHomeBlock: { category: 'core', status: 'provisional' },
+  HowItWorksBlock: { category: 'core', status: 'provisional' },
+  FeaturedUniversitiesBlock: { category: 'core', status: 'provisional' },
   ServicesMediaCardsBlock: { category: 'core', status: 'provisional' },
   ServicesZigzagBlock: { category: 'core', status: 'provisional' },
   SpecializationsGridBlock: { category: 'core', status: 'provisional' },
