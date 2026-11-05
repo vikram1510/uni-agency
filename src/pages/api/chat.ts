@@ -14,11 +14,13 @@ const INSTRUCTIONS = `You are the course finder on the website of UniPath, a UK 
 Your goal is to help the student find 1–3 courses from the catalogue below that genuinely fit them, then encourage them to book a free consultation with an advisor.
 
 How to help:
-- Find out what they want to study, what qualifications they have (e.g. GCSEs, A-levels, BTEC, Access course, HND, a degree, or none), and anything that matters to them such as location or start date. Ask one or two short questions at a time, never a long list.
-- Once you know enough, recommend courses from the catalogue. For each, link to its page using the path given, e.g. [Adult Nursing](/courses/undergraduate/adult-nursing/), say briefly why it fits and mention the typical entry requirements.
+- As soon as they mention a subject or course, recommend matching courses from the catalogue straight away. Don't wait until you know their qualifications.
+- Then you can ask about their qualifications (e.g. GCSEs, A-levels, BTEC, Access course, HND, a degree, or none) and anything that matters to them, such as location or start date, to refine the suggestions. Ask one or two short questions at a time, never a long list.
+- When recommending courses, link each to its page using the path given, e.g. [Adult Nursing](/courses/undergraduate/adult-nursing/), say briefly why it fits and mention the typical entry requirements.
 - If they lack the usual entry requirements, explain routes like Access courses, foundation years, Level 3–5 diplomas and top-up degrees, using courses in the catalogue where possible.
 - For money questions, give a short general answer and link to [our student finance guide](/student-finance/).
-- When they have a shortlist, want help applying, or ask something you can't answer, suggest they [book a free consultation](/#contact) with an advisor.
+- As soon as you have recommended at least one course, call the offer_consultation tool so a booking button appears below your message, and end your reply by inviting them to book a free consultation with an advisor to talk through it and get help applying. Also call it if they want help applying or ask something only an advisor can answer.
+- Call offer_consultation only once per conversation, unless the course they're focused on changes. Don't write booking links yourself; the button handles it.
 
 Rules:
 - Only recommend courses and universities in the catalogue. If nothing fits, say so honestly and suggest a free consultation.
@@ -27,6 +29,30 @@ Rules:
 - Don't ask for contact details in the chat.
 - Keep replies short, warm and plain. Use British English.
 - Politely decline requests unrelated to studying at university.`;
+
+const CONSULTATION_SHOWN = "[A 'Book a free consultation' button was shown to the student.]";
+
+const consultationSchema = z.object({
+  course: z.string().min(1).max(200),
+  coursePath: z.string().max(200).optional(),
+  summary: z.string().min(1).max(500),
+});
+
+const offerConsultationTool: Anthropic.Beta.BetaTool = {
+  name: "offer_consultation",
+  description:
+    "Shows the student a button to book a free consultation with an advisor, pre-filled with the course you discussed. Call it right after recommending a course, or when the student wants help applying.",
+  eager_input_streaming: true,
+  input_schema: {
+    type: "object",
+    properties: {
+      course: { type: "string", description: "Title of the main course discussed, exactly as in the catalogue, or 'General advice' if none yet." },
+      coursePath: { type: "string", description: "The course page path from the catalogue, e.g. /courses/undergraduate/adult-nursing/. Omit for general advice." },
+      summary: { type: "string", description: "One or two sentences for the advisor: what the student wants, their qualifications and any preferences." },
+    },
+    required: ["course", "summary"],
+  },
+};
 
 const client = new Anthropic({ apiKey: import.meta.env.ANTHROPIC_API_KEY });
 
@@ -48,7 +74,11 @@ function toAnthropicMessages(messages: Pick<UIMessage, "role" | "parts">[]): Ant
     .map((m) => ({
       role: m.role as "user" | "assistant",
       content: m.parts
-        .map((p) => (p.type === "text" && "text" in p ? p.text : ""))
+        .map((p) => {
+          if (p.type === "text" && "text" in p) return p.text;
+          if (p.type === "data-consultation" && m.role === "assistant") return `\n\n${CONSULTATION_SHOWN}`;
+          return "";
+        })
         .join("")
         .slice(0, MAX_MESSAGE_CHARS),
     }))
@@ -85,6 +115,7 @@ export const POST: APIRoute = async ({ request }) => {
               cache_control: { type: "ephemeral" },
             },
           ],
+          tools: [offerConsultationTool],
           messages,
         },
         { signal: request.signal },
@@ -107,6 +138,14 @@ export const POST: APIRoute = async ({ request }) => {
         });
       }
       writer.write({ type: "text-end", id: textId });
+
+      if (final.stop_reason === "tool_use") {
+        const call = final.content.find((block) => block.type === "tool_use" && block.name === offerConsultationTool.name);
+        const offer = call?.type === "tool_use" ? consultationSchema.safeParse(call.input) : undefined;
+        if (offer?.success) {
+          writer.write({ type: "data-consultation", data: offer.data });
+        }
+      }
     },
     onError: (error) => {
       console.error("chat error", error);

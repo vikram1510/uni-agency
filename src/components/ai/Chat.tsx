@@ -35,6 +35,29 @@ function AssistantAvatar() {
   )
 }
 
+type ConsultationOffer = { course: string; coursePath?: string; summary: string }
+
+function ConsultationCard({ offer }: { offer: ConsultationOffer }) {
+  return (
+    <div className="mt-3 rounded-2xl border border-brand-dark/10 bg-brand-dark/[0.03] p-4">
+      <p className="text-xs font-semibold uppercase tracking-wide text-brand-dark/50">Free consultation</p>
+      <p className="mt-1 font-semibold text-brand-dark">
+        {offer.course === "General advice" ? "Talk it through with an advisor" : `Talk to an advisor about ${offer.course}`}
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <a href="/#contact" className="rounded-full bg-brand-dark px-4 py-2 text-sm font-semibold text-white hover:opacity-85">
+          Book a free consultation
+        </a>
+        {offer.coursePath?.startsWith("/courses/") && (
+          <a href={offer.coursePath} className="rounded-full border border-brand-dark/15 px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-dark/5">
+            View course
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}
+
 function TypingDots() {
   return (
     <div className="flex items-center gap-1 py-3">
@@ -87,6 +110,7 @@ export default function Chat({ copy, variant = "page", readQueryParam = false }:
 
   return (
     <div
+      data-lenis-prevent
       className={cn(
         "flex flex-col overflow-hidden bg-white",
         variant === "page"
@@ -133,11 +157,15 @@ export default function Chat({ copy, variant = "page", readQueryParam = false }:
                 <div key={m.id} className="flex items-start gap-3">
                   <AssistantAvatar />
                   <div className="min-w-0 flex-1 pt-1 text-sm leading-relaxed text-brand-dark">
-                    {m.parts.map((part, i) =>
-                      part.type === "text" ? (
-                        <MessageResponse key={`${m.id}-${i}`}>{part.text}</MessageResponse>
-                      ) : null,
-                    )}
+                    {m.parts.map((part, i) => {
+                      if (part.type === "text") {
+                        return <MessageResponse key={`${m.id}-${i}`}>{part.text}</MessageResponse>
+                      }
+                      if (part.type === "data-consultation") {
+                        return <ConsultationCard key={`${m.id}-${i}`} offer={part.data as ConsultationOffer} />
+                      }
+                      return null
+                    })}
                   </div>
                 </div>
               ),

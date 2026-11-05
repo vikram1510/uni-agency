@@ -174,8 +174,8 @@ describe('link audit', () => {
       expect(issues.filter((i) => i.rule === 'broken-route')).toHaveLength(0);
     });
 
-    it('accepts the AI route', () => {
-      const source = '<a href="/ai/">AI</a>';
+    it('accepts the find your course route', () => {
+      const source = '<a href="/find-your-course/">Find your course</a>';
       const issues = auditLinks(source, 'src/test.astro', defaultRoutes);
       expect(issues.filter((i) => i.rule === 'broken-route')).toHaveLength(0);
     });
@@ -295,7 +295,7 @@ describe('link audit', () => {
     it('accepts footer with trailing slashes', () => {
       const source = `
         <a href="/">Home</a>
-        <a href="/ai/">AI</a>
+        <a href="/find-your-course/">Find your course</a>
         <a href="/cookies/">Cookies</a>
         <a href="/privacy-policy/">Privacy</a>
         <a href="https://webscale.pl" target="_blank">WebScale</a>
@@ -309,7 +309,7 @@ describe('link audit', () => {
     it('accepts valid navbar links', () => {
       const source = `
         <a href="/">Home</a>
-        <a href="/ai/">AI</a>
+        <a href="/find-your-course/">Find your course</a>
         <a href="/cookies/">Cookies</a>
         <a href="/privacy-policy/">Privacy</a>
       `;
