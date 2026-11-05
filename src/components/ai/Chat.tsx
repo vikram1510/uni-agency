@@ -36,7 +36,12 @@ function AssistantAvatar() {
   )
 }
 
-type ConsultationOffer = { course: string; coursePath?: string; summary: string }
+const linkSafety = {
+  enabled: true,
+  onLinkCheck: (url: string) => url.startsWith("/") && !url.startsWith("//"),
+}
+
+type ConsultationOffer ={ course: string; coursePath?: string; summary: string }
 
 function ConsultationCard({ offer }: { offer: ConsultationOffer }) {
   const [open, setOpen] = useState(false)
@@ -172,7 +177,7 @@ export default function Chat({ copy, variant = "page", readQueryParam = false }:
                   <div className="min-w-0 flex-1 pt-1 text-sm leading-relaxed text-brand-dark">
                     {m.parts.map((part, i) => {
                       if (part.type === "text") {
-                        return <MessageResponse key={`${m.id}-${i}`}>{part.text}</MessageResponse>
+                        return <MessageResponse key={`${m.id}-${i}`} linkSafety={linkSafety}>{part.text}</MessageResponse>
                       }
                       if (part.type === "data-consultation") {
                         return <ConsultationCard key={`${m.id}-${i}`} offer={part.data as ConsultationOffer} />
