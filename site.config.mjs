@@ -1,7 +1,7 @@
 // Single source of truth for site / client project configuration.
 // Edit THIS file when changing domain.
 // Environment domain used during build.
-export const SITE_URL = 'https://uni-agency.vercel.app/';
+export const SITE_URL = 'https://myunipath.co.uk/';
 export const ACTIVE_TEMPLATE = 'nova';
 
 // Nova currently ships English and Polish routes. SITE_LOCALE selects the

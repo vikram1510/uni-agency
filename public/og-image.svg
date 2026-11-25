@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="UniPath, find the right university and course">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="MyUniPath, find the right university and course">
   <rect width="1200" height="630" fill="#161616"/>
   <circle cx="1080" cy="90" r="280" fill="#b98b6e" opacity="0.12"/>
   <circle cx="110" cy="560" r="210" fill="#b98b6e" opacity="0.08"/>
-  <text x="100" y="150" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="10" fill="#b98b6e">UNIPATH</text>
+  <text x="100" y="150" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="10" fill="#b98b6e">MYUNIPATH</text>
   <text x="100" y="300" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#fffdf9">Find the right</text>
   <text x="100" y="390" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#fffdf9">university and course</text>
   <text x="100" y="480" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#fffdf9" opacity="0.75">Free advice for UK students: courses, applications and student finance</text>

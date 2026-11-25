@@ -1,6 +1,6 @@
 {
-  "fullName": "UniPath",
-  "name": "UniPath",
+  "fullName": "MyUniPath",
+  "name": "MyUniPath",
   "branding": {
     "icon": "ph-graduation-cap",
     "font": "Satoshi",
@@ -18,7 +18,7 @@
   "nip": "",
   "krs": "",
   "regon": "",
-  "siteUrl": "https://uni-agency.vercel.app",
+  "siteUrl": "https://myunipath.co.uk",
   "smtp": {
     "smtpHost": "smtp.example.com",
     "smtpPort": 587,

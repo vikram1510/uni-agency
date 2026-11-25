@@ -1,9 +1,9 @@
-# UniPath (uni-agency)
+# MyUniPath (uni-agency)
 
 Website for a UK agency that gives free advice to **UK students** (school leavers and mature students) on choosing a university and course, applying, and student finance. Its main job is to **capture leads** and get students to book a free consultation.
 
-- Live: https://uni-agency.vercel.app (Vercel, auto-deploys from `main`). Domain not bought yet. When it is, update `SITE_URL` in `site.config.mjs` and `siteUrl` in `src/data/global/company.json`.
-- "UniPath" is a **placeholder name**, set in `company.json` (logo, schema) and the copy.
+- Live: https://uni-agency.vercel.app (Vercel, auto-deploys from `main`). Domain: `myunipath.co.uk` (bought at Fasthosts, DNS to be pointed at Vercel). `SITE_URL` in `site.config.mjs` and `siteUrl` in `src/data/global/company.json` already use it.
+- Brand name "MyUniPath" (chosen Nov 2026; "UniPath" domains were taken), set in `company.json` (logo, schema) and the copy.
 - Content and structure follow https://gcrdhub.com (UK and international sections dropped). All text is rewritten in our own words. Never copy from it.
 - Original plan: `~/development/grill-docs/uni-agency-plan.md`.
 
