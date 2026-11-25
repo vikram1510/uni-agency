@@ -3,7 +3,7 @@
 Website for a UK agency that gives free advice to **UK students** (school leavers and mature students) on choosing a university and course, applying, and student finance. Its main job is to **capture leads** and get students to book a free consultation.
 
 - Live: https://uni-agency.vercel.app (Vercel, auto-deploys from `main`). Domain: `myunipath.co.uk` (bought at Fasthosts, DNS to be pointed at Vercel). `SITE_URL` in `site.config.mjs` and `siteUrl` in `src/data/global/company.json` already use it.
-- Brand name "MyUniPath" (chosen Nov 2026; "UniPath" domains were taken), set in `company.json` (logo, schema) and the copy.
+- Brand name "MyUniPath" (chosen Nov 2026; "UniPath" domains were taken), set in `company.json` (logo, schema) and the copy. Legal entity: **Talentvoyant Ltd** (Companies House 09313007), in `company.json` → `legal`. It shows in the footer, privacy policy and schema (`legalName`). UK law requires these details on the site.
 - Content and structure follow https://gcrdhub.com (UK and international sections dropped). All text is rewritten in our own words. Never copy from it.
 - Original plan: `~/development/grill-docs/uni-agency-plan.md`.
 
@@ -60,7 +60,7 @@ Adding a university or course = add a JSON file. Its page, listings, sitemap and
 - **Theme fade-in motion** staggers every card in a section (120ms each), so long lists appear slowly. Put `data-motion="fade"` on the heading block to opt the section out (see the universities and courses pages).
 - **Vite "Failed to fetch dynamically imported module"** in dev means restart the dev server. It's not a code bug.
 - The theme came with **Polish** demo content. Most is removed, but leftovers remain in dev-only demo pages (`src/pages/dev`, `qa`, blog posts, unused section JSON, code comments).
-- `Schema.astro` outputs an `Organization` (no address) until real company details exist.
+- `Schema.astro` outputs an `Organization` with `legalName` and company number, but no address (the registered office isn't a place students visit).
 - Streamdown (chat markdown) shows a link-safety popup. Internal links skip it via `onLinkCheck` in `Chat.tsx`.
 
 ## Status (Nov 2026)
@@ -69,7 +69,7 @@ Done: universities, courses, homepage rewrite, About, Student Finance, UK privac
 
 Next / open:
 1. **Cal.com booking** after the lead form (waiting on the booking link). Add the Cal.com webhook to update the HubSpot lead status.
-2. Real agency name, contact details (`company.json` email is a placeholder), real images, logo.
+2. Contact details (`company.json` email is a placeholder), real images, logo.
 3. Rate limiting on `/api/chat` and `/api/lead`. Set a spend limit in the Anthropic Console.
 4. Verify the `/ai/` → `/find-your-course/` redirect works with the trailing slash on Vercel.
 5. Remove unused `src/pages/terms.astro` + `src/content/legal/terms*` and `src/data/ai/product.md`.

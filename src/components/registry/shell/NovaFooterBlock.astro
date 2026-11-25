@@ -2,6 +2,11 @@
 import Text from "@components/ui/atoms/Text.astro";
 import Button from "@components/ui/atoms/Button.astro";
 import { getNovaCopy, getNovaNavigationPath, type NovaLocale } from "@utils/nova-i18n";
+import companyRaw from "@data/global/company.json";
+import type { CompanyConfig } from "@/types/config";
+
+const company = companyRaw as CompanyConfig;
+const legal = company.legal;
 
 interface Props {
   locale?: NovaLocale;
@@ -39,8 +44,13 @@ const legalLinks = copy.legalLinks.map((link) => ({ ...link, href: getNovaNaviga
         {footerLinks.map((link) => <a href={link.href} class="inline-flex min-h-11 items-center text-sm text-brand-light transition-colors hover:text-brand-accent sm:min-h-0">{link.label}</a>)}
       </nav>
     </div>
-    <div class="flex flex-col items-center gap-4 border-t border-brand-light/25 pt-8 text-center text-brand-light/75 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-      <Text tag="span" variant="feature-body-sm">{copy.copyright}</Text>
+    <div class="flex flex-col items-center gap-2 border-t border-brand-light/25 pt-8 text-center text-brand-light/75 sm:items-start sm:text-left">
+      <Text tag="span" variant="feature-body-sm">{`© ${new Date().getFullYear()} ${company.name}. ${copy.copyright}`}</Text>
+      {legal && (
+        <p class="m-0 text-xs leading-relaxed text-brand-light/60">
+          {company.name} is a trading name of {legal.name}, registered in {legal.registeredIn}, company number {legal.companyNumber}. Registered office: {legal.registeredOffice}.
+        </p>
+      )}
     </div>
   </div>
 </footer>

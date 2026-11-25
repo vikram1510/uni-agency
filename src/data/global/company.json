@@ -1,6 +1,12 @@
 {
   "fullName": "MyUniPath",
   "name": "MyUniPath",
+  "legal": {
+    "name": "Talentvoyant Ltd",
+    "companyNumber": "09313007",
+    "registeredIn": "England and Wales",
+    "registeredOffice": "Unit 17 Westmoreland Road, London, NW9 9BW"
+  },
   "branding": {
     "icon": "ph-graduation-cap",
     "font": "Satoshi",

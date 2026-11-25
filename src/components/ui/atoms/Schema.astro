@@ -32,6 +32,14 @@ const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
 	name: company.fullName || company.name,
+	...(company.legal && {
+		legalName: company.legal.name,
+		identifier: {
+			'@type': 'PropertyValue',
+			propertyID: 'Companies House company number',
+			value: company.legal.companyNumber,
+		},
+	}),
 	description: company.description || seo.defaultDescription,
 	image: `${siteBase}/og-image.png`,
 	'@id': siteBase,

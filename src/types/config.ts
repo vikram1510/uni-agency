@@ -60,6 +60,12 @@ export interface FooterConfig {
 export interface CompanyConfig {
   name: string;
   fullName: string;
+  legal?: {
+    name: string;
+    companyNumber: string;
+    registeredIn: string;
+    registeredOffice: string;
+  };
   branding: {
     icon: string;
     font: string;
