@@ -32,6 +32,17 @@ const logoPath = company.branding.logoImage;
       class={density === "compact" ? "h-11 w-auto object-contain lg:h-14" : "h-10 lg:h-12 w-auto object-contain"}
     />
   ) : (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="10 24 108 70"
+      aria-hidden="true"
+      class={`w-auto shrink-0 ${density === "compact" ? "h-6" : "h-7"}`}
+    >
+      <path d="M64 26 116 50 64 74 12 50Z" fill="#C79A78" />
+      <path d="M34 63v19c0 13 60 13 60 0V63L64 77Z" fill="#C79A78" />
+      <rect x="103" y="52" width="6" height="30" rx="3" fill="#C79A78" />
+      <circle cx="106" cy="86" r="6" fill="#C79A78" />
+    </svg>
     <span class="font-heading text-base font-bold tracking-[0.18em]" aria-label={company.name}>
       {company.name.toUpperCase()}
     </span>
